@@ -55,11 +55,12 @@ section#osa5{
     margin: 5px;
 }
 
-img{
+img#erapilt{
     width: 100%;
     border-radius: 50%;
     border: 5px solid crimson;
 }
+
 /*navigeerimis menüü*/
 ul {
     list-style-type: none;
@@ -86,4 +87,26 @@ nav{
 }
 nav ul li a:hover{
     background-color: lightcoral;
+}
+
+#suurkast{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+section#pildigalerii{
+    border: 3px solid crimson;
+}
+section#video{
+    border: 3px solid crimson;
+    padding: 5%;
+}
+section#muusika{
+    border: 3px solid crimson;
+    padding: 5%;
+}
+section#kaart{
+    border: 3px solid crimson;
+    padding: 5%;
 }
