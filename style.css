@@ -1,0 +1,89 @@
+/*kommentaar*/
+h1{
+    font-variant: small-caps;
+    font-size: xx-large;
+    color: crimson; /*teksti värv*/
+    background: transparent; /*tausta värv*/
+
+}
+header{
+    padding: 5%;
+    background-color: lightgray;
+    border-left: 3px solid crimson;
+    border-right: 3px solid crimson;
+    border-bottom: 3px solid crimson;
+    border-radius: 0 0 0 60px;
+    background-image: url("Uss.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+footer{
+    padding: 5%;
+    background-color: lightgray;
+    border-left: 3px solid crimson;
+    border-top: 3px solid crimson;
+    border-radius: 60px 0 0 0;
+}
+section#osa1{
+    padding: 5%;
+    border: 3px solid crimson; /*dotted, dashed, double, outline, groove*/
+    margin: 5px;
+    width: 25%;
+    /*kirjuta iga section (osa3, osa4, osa5)
+    oma kujundusega mis kasutab erinevaid ääriseid,
+    värve, raam võiks olla ainult ühelt poolt jne*/
+}
+section#osa2{
+    padding: 5%;
+    border: 3px solid crimson;
+    margin: 5px;
+    width: 15%;
+}
+section#osa3{
+    padding: 5%;
+    border: 3px solid crimson;
+    margin: 5px;
+}
+section#osa4{
+    padding: 5%;
+    border: 3px solid crimson;
+    margin: 5px;
+}
+section#osa5{
+    padding: 5%;
+    border: 3px solid crimson;
+    margin: 5px;
+}
+
+img{
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid crimson;
+}
+/*navigeerimis menüü*/
+ul {
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    background-color: lightgray;
+}
+ul li{
+    float: left;
+}
+nav ul li a{
+    display: block;
+    color: black;
+    text-decoration: none; /*link on alajooneta*/
+    text-align: center; /*teksti joondamine keskel*/
+    padding: 10px;
+    border-left: 3px solid crimson;
+    border-right: 3px solid crimson;
+    border-radius: 20%;
+}
+nav{
+    padding: 5%;
+    margin-bottom: 5px;
+}
+nav ul li a:hover{
+    background-color: lightcoral;
+}
