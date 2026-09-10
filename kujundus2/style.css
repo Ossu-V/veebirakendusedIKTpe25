@@ -1,33 +1,17 @@
 /* ==========================================================================
    OSCAR VEEBIRAKENDUSTE ALUSTE TÖÖD
-   Täielik korrastatud style.css
-   --------------------------------------------------------------------------
-   Eeldatav galerii HTML:
-
-   <section class="gallery-section">
-     <h2>Pildigalerii</h2>
-     <div class="gallery">
-       <img src="pilt1.jpg" alt="Pilt 1">
-       <img src="pilt2.jpg" alt="Pilt 2">
-       <img src="pilt3.jpg" alt="Pilt 3">
-       <img src="pilt4.jpg" alt="Pilt 4">
-     </div>
-   </section>
-
-   Oluline:
-   - .gallery peab sisaldama ainult galerii pilte.
-   - Ära pane .gallery klassi kogu lehele ega <section>-ile.
-   - Pildid paigutatakse alati CSS Gridiga kõrvuti.
+   Täielik style.css
    ========================================================================== */
 
 /* ==========================================================================
-   1. Fondid
+   1. FONDID
    ========================================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
 
+
 /* ==========================================================================
-   2. Värvid ja disainimuutujad
+   2. VÄRVID
    ========================================================================== */
 
 :root {
@@ -37,28 +21,42 @@
 
     --background: #e8eaff;
     --background-dark: #cfd3f5;
+
     --surface: #f7f5ff;
     --surface-purple: #ece9ff;
 
     --text: #303653;
     --text-muted: #717895;
     --heading: #171b3f;
-    --border: rgba(43, 48, 97, 0.16);
+
+    --border: rgba(43, 48, 97, 0.14);
 
     --purple: #7957ff;
     --purple-dark: #5540d8;
+
     --magenta: #e84393;
     --coral: #ff6f61;
+
     --cyan: #30cfd0;
     --lime: #c9f05a;
+
     --yellow: #ffd166;
     --blue: #4e8cff;
 
-    --gradient-purple: linear-gradient(135deg, #5540d8, #9b5cff);
-    --gradient-magenta: linear-gradient(135deg, #e84393, #ff6f61);
-    --gradient-cyan: linear-gradient(135deg, #30cfd0, #4e8cff);
-    --gradient-lime: linear-gradient(135deg, #c9f05a, #30cfd0);
-    --gradient-header: linear-gradient(120deg, #5540d8, #e84393, #ff6f61);
+    --gradient-purple:
+            linear-gradient(135deg, #5540d8, #9b5cff);
+
+    --gradient-magenta:
+            linear-gradient(135deg, #e84393, #ff6f61);
+
+    --gradient-cyan:
+            linear-gradient(135deg, #30cfd0, #4e8cff);
+
+    --gradient-lime:
+            linear-gradient(135deg, #c9f05a, #30cfd0);
+
+    --gradient-header:
+            linear-gradient(120deg, #5540d8, #e84393, #ff6f61);
 
     --code-background: #15182d;
     --code-surface: #20264a;
@@ -69,9 +67,14 @@
     --code-blue: #8edcff;
     --code-yellow: #ffe08a;
 
-    --shadow-small: 0 8px 20px rgba(31, 36, 82, 0.1);
-    --shadow-card: 0 18px 42px rgba(31, 36, 82, 0.15);
-    --shadow-purple: 0 15px 32px rgba(121, 87, 255, 0.28);
+    --shadow-small:
+            0 8px 20px rgba(31, 36, 82, 0.09);
+
+    --shadow-card:
+            0 18px 42px rgba(31, 36, 82, 0.13);
+
+    --shadow-purple:
+            0 15px 32px rgba(121, 87, 255, 0.28);
 
     --radius-small: 10px;
     --radius-medium: 17px;
@@ -81,8 +84,9 @@
     --content-width: 1100px;
 }
 
+
 /* ==========================================================================
-   3. Lähtestus
+   3. RESET
    ========================================================================== */
 
 *,
@@ -99,23 +103,39 @@ html {
 
 body {
     min-width: 320px;
+    min-height: 100vh;
+
     margin: 0;
+
     color: var(--text);
+
     background:
             radial-gradient(
                     circle at 5% 0%,
                     rgba(201, 240, 90, 0.24),
                     transparent 24rem
             ),
+
             radial-gradient(
                     circle at 95% 12%,
-                    rgba(232, 67, 147, 0.2),
+                    rgba(232, 67, 147, 0.20),
                     transparent 26rem
             ),
-            linear-gradient(135deg, var(--background), var(--surface-purple));
-    font-family: "DM Sans", system-ui, sans-serif;
+
+            linear-gradient(
+                    135deg,
+                    var(--background),
+                    var(--surface-purple)
+            );
+
+    font-family:
+            "DM Sans",
+            system-ui,
+            sans-serif;
+
     font-size: 16px;
     line-height: 1.6;
+
     -webkit-font-smoothing: antialiased;
 }
 
@@ -130,6 +150,7 @@ video {
 a {
     color: var(--purple-dark);
     text-decoration: none;
+
     transition:
             color 180ms ease,
             transform 180ms ease,
@@ -145,172 +166,315 @@ a:hover {
     background: var(--lime);
 }
 
+
 /* ==========================================================================
-   4. Põhiline paigutus
+   4. PÕHINE PAIGUTUS
    ========================================================================== */
 
 header,
-main,
-footer {
-    width: min(calc(100% - 40px), var(--content-width));
+main {
+    width: min(
+            calc(100% - 40px),
+            var(--content-width)
+    );
+
     margin-inline: auto;
 }
 
 main {
     display: grid;
     gap: 18px;
-    padding-block: 24px 55px;
+
+    padding-block:
+            24px
+            110px;
 }
 
+
 /* ==========================================================================
-   5. Päis
+   5. PÄIS
    ========================================================================== */
 
 header {
     position: relative;
     z-index: 10;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     gap: 28px;
+
     min-height: 108px;
+
     margin-top: 20px;
-    padding: 25px 30px;
+
+    padding:
+            25px
+            30px;
+
     overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.7);
+
+    border:
+            1px solid
+            rgba(255, 255, 255, 0.7);
+
     border-radius: var(--radius-large);
+
     background:
             linear-gradient(
                     125deg,
-                    rgba(247, 245, 255, 0.92),
-                    rgba(236, 233, 255, 0.8)
+                    rgba(247, 245, 255, 0.94),
+                    rgba(236, 233, 255, 0.84)
             );
+
     box-shadow: var(--shadow-card);
+
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 }
 
+
+/* Päise värviline kuma */
+
 header::before {
     position: absolute;
+
     top: -100px;
     right: -45px;
+
     width: 280px;
     height: 280px;
+
     content: "";
+
     border-radius: 50%;
+
     background:
-            radial-gradient(circle at 30% 30%, var(--lime), transparent 30%),
-            radial-gradient(circle at 70% 60%, var(--magenta), transparent 45%);
+            radial-gradient(
+                    circle at 30% 30%,
+                    var(--lime),
+                    transparent 30%
+            ),
+
+            radial-gradient(
+                    circle at 70% 60%,
+                    var(--magenta),
+                    transparent 45%
+            );
+
     opacity: 0.35;
+
     filter: blur(14px);
 }
 
+
+/* Päise alumine värviline joon */
+
 header::after {
     position: absolute;
+
     bottom: 0;
     left: 30px;
+
     width: 130px;
     height: 5px;
+
     content: "";
+
     border-radius: var(--radius-pill);
-    background: var(--gradient-header);
+
+    background:
+            var(--gradient-header);
 }
+
+
+/* Päise pealkiri */
 
 header h1,
 header h2,
 header h3 {
     position: relative;
     z-index: 1;
+
     flex: 1;
+
     margin: 0;
+
     color: transparent;
-    background: var(--gradient-header);
+
+    background:
+            var(--gradient-header);
+
     background-clip: text;
     -webkit-background-clip: text;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: clamp(1.35rem, 3vw, 2.4rem);
+
+    font-family:
+            "Space Grotesk",
+            sans-serif;
+
+    font-size:
+            clamp(
+                    1.35rem,
+                    3vw,
+                    2.4rem
+            );
+
     font-weight: 700;
+
     letter-spacing: -0.06em;
+
     line-height: 1.08;
 }
+
+
+/* Logo */
 
 header img,
 header svg,
 header .logo {
     position: relative;
     z-index: 1;
+
     flex: 0 0 auto;
+
     max-width: 150px;
     max-height: 72px;
+
     object-fit: contain;
 }
 
 header .logo {
     display: grid;
+
     width: 67px;
     height: 67px;
+
     place-items: center;
-    border: 3px solid rgba(255, 255, 255, 0.75);
+
+    border:
+            3px solid
+            rgba(255, 255, 255, 0.75);
+
     border-radius: 21px;
+
     color: var(--night);
-    background: var(--gradient-lime);
-    box-shadow: 0 14px 28px rgba(48, 207, 208, 0.24);
-    font-family: "Space Grotesk", sans-serif;
+
+    background:
+            var(--gradient-lime);
+
+    box-shadow:
+            0 14px 28px
+            rgba(48, 207, 208, 0.24);
+
+    font-family:
+            "Space Grotesk",
+            sans-serif;
+
     font-weight: 700;
 }
 
+
 /* ==========================================================================
-   6. Vasakpoolne navigatsioon
+   6. NAVIGATSIOON
    ========================================================================== */
+
+/*
+   Menüüd kuvatakse nüüd ekraani alumises osas,
+   mitte vasakul keskel.
+*/
 
 nav {
     position: fixed;
+
     z-index: 100;
-    top: 50%;
-    left: 16px;
+
+    left: 50%;
+    bottom: 72px;
+
     display: flex;
-    width: auto;
+
+    width: max-content;
+    max-width: calc(100% - 30px);
+
     margin: 0;
-    padding: 9px;
-    border: 1px solid rgba(255, 255, 255, 0.68);
-    border-radius: 21px;
-    background: rgba(247, 245, 255, 0.82);
-    box-shadow: var(--shadow-card);
-    transform: translateY(-50%);
+
+    padding: 7px 9px;
+
+    border:
+            1px solid
+            rgba(255, 255, 255, 0.75);
+
+    border-radius: 18px;
+
+    background:
+            rgba(247, 245, 255, 0.88);
+
+    box-shadow:
+            0 12px 35px
+            rgba(31, 36, 82, 0.18);
+
+    transform:
+            translateX(-50%);
+
     backdrop-filter: blur(18px);
     -webkit-backdrop-filter: blur(18px);
 }
 
+
+/* Menüü taust */
+
 nav::before {
     position: absolute;
+
     z-index: -1;
-    inset: 4px;
+
+    inset: 3px;
+
     content: "";
-    border-radius: 17px;
-    background: linear-gradient(
-            180deg,
-            rgba(201, 240, 90, 0.2),
-            rgba(121, 87, 255, 0.13)
-    );
+
+    border-radius: 15px;
+
+    background:
+            linear-gradient(
+                    90deg,
+                    rgba(201, 240, 90, 0.12),
+                    rgba(121, 87, 255, 0.08),
+                    rgba(232, 67, 147, 0.10)
+            );
 }
+
+
+/* Väike värviline joon */
 
 nav::after {
     position: absolute;
-    top: 14px;
-    right: -3px;
-    bottom: 14px;
-    width: 4px;
+
+    right: 12px;
+    bottom: -3px;
+    left: 12px;
+
+    height: 3px;
+
     content: "";
-    border-radius: var(--radius-pill);
-    background: var(--gradient-magenta);
+
+    border-radius:
+            var(--radius-pill);
+
+    background:
+            var(--gradient-header);
 }
+
 
 nav ul {
     display: flex;
-    flex-direction: column;
-    gap: 6px;
+    align-items: center;
+
+    gap: 4px;
+
     margin: 0;
     padding: 0;
+
     list-style: none;
 }
 
@@ -319,54 +483,110 @@ nav li {
     padding: 0;
 }
 
+
+/* Menüünupp */
+
 nav a {
     position: relative;
+
     display: flex;
     align-items: center;
-    min-width: 150px;
-    min-height: 43px;
-    padding: 9px 14px;
-    border-radius: 13px;
+    justify-content: center;
+
+    min-height: 40px;
+
+    padding:
+            7px
+            13px;
+
+    border-radius: 12px;
+
     color: var(--text-muted);
-    font-size: 0.86rem;
+
+    font-size: 0.82rem;
     font-weight: 700;
+
     white-space: nowrap;
+
+    transition:
+            color 180ms ease,
+            background 180ms ease,
+            transform 180ms ease,
+            box-shadow 180ms ease;
 }
 
+
+/* Väike täpp */
+
 nav a::before {
-    width: 8px;
-    height: 8px;
-    margin-right: 10px;
+    width: 7px;
+    height: 7px;
+
+    margin-right: 8px;
+
     content: "";
+
     border-radius: 50%;
-    background: var(--purple);
-    box-shadow: 0 0 0 4px rgba(121, 87, 255, 0.14);
+
+    background:
+            var(--purple);
+
+    box-shadow:
+            0 0 0 3px
+            rgba(121, 87, 255, 0.13);
+
+    transition:
+            background 180ms ease,
+            transform 180ms ease;
 }
+
+
+/* Hover */
 
 nav a:hover {
     color: var(--heading);
-    background: rgba(201, 240, 90, 0.42);
-    transform: translateX(4px);
+
+    background:
+            rgba(201, 240, 90, 0.35);
+
+    transform:
+            translateY(-2px);
 }
 
 nav a:hover::before {
-    background: var(--magenta);
+    background:
+            var(--magenta);
+
+    transform:
+            scale(1.15);
 }
+
+
+/* Aktiivne */
 
 nav a.active,
 nav a[aria-current="page"] {
     color: var(--night);
-    background: var(--gradient-lime);
-    box-shadow: 0 9px 23px rgba(48, 207, 208, 0.25);
+
+    background:
+            var(--gradient-lime);
+
+    box-shadow:
+            0 7px 18px
+            rgba(48, 207, 208, 0.22);
 }
 
 nav a.active::before,
 nav a[aria-current="page"]::before {
-    background: var(--night);
+    background:
+            var(--night);
+
+    box-shadow: none;
 }
 
+
 /* ==========================================================================
-   7. Tavalised sisukaardid
+   7. SISUKAARDID
    ========================================================================== */
 
 main > section,
@@ -376,13 +596,48 @@ main > div,
 section.card,
 article.card {
     position: relative;
-    padding: clamp(23px, 3.5vw, 34px);
+
+    padding:
+            clamp(
+                    23px,
+                    3.5vw,
+                    34px
+            );
+
     overflow: hidden;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-medium);
-    background: rgba(247, 245, 255, 0.88);
-    box-shadow: var(--shadow-small);
+
+    border:
+            1px solid
+            var(--border);
+
+    border-radius:
+            var(--radius-medium);
+
+    background:
+            rgba(247, 245, 255, 0.88);
+
+    box-shadow:
+            var(--shadow-small);
+
+    transition:
+            transform 220ms ease,
+            box-shadow 220ms ease;
 }
+
+
+/* Kerge hover */
+
+main > section:hover,
+main > article:hover,
+.card:hover,
+section.card:hover,
+article.card:hover {
+    box-shadow:
+            var(--shadow-card);
+}
+
+
+/* Kaartide värviline ülemine joon */
 
 main > section::before,
 main > article::before,
@@ -391,17 +646,27 @@ main > div::before,
 section.card::before,
 article.card::before {
     position: absolute;
+
     top: 0;
     left: 28px;
+
     width: 82px;
     height: 5px;
+
     content: "";
-    border-radius: 0 0 var(--radius-pill) var(--radius-pill);
-    background: var(--gradient-header);
+
+    border-radius:
+            0 0
+            var(--radius-pill)
+            var(--radius-pill);
+
+    background:
+            var(--gradient-header);
 }
 
+
 /* ==========================================================================
-   8. Tüpograafia
+   8. TÜPOGRAAFIA
    ========================================================================== */
 
 h1,
@@ -411,30 +676,59 @@ h4,
 h5,
 h6 {
     margin-top: 0;
-    color: var(--heading);
-    font-family: "Space Grotesk", sans-serif;
+
+    color:
+            var(--heading);
+
+    font-family:
+            "Space Grotesk",
+            sans-serif;
+
     font-weight: 700;
+
     letter-spacing: -0.045em;
+
     line-height: 1.15;
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 3.7rem);
+    font-size:
+            clamp(
+                    2rem,
+                    5vw,
+                    3.7rem
+            );
 }
 
 h2 {
     margin-bottom: 14px;
-    font-size: clamp(1.7rem, 3vw, 2.4rem);
+
+    font-size:
+            clamp(
+                    1.7rem,
+                    3vw,
+                    2.4rem
+            );
 }
 
 h3 {
     margin-bottom: 10px;
-    font-size: clamp(1.25rem, 2vw, 1.65rem);
+
+    font-size:
+            clamp(
+                    1.25rem,
+                    2vw,
+                    1.65rem
+            );
 }
 
 p {
     max-width: 75ch;
-    margin: 0 0 0.85rem;
+
+    margin:
+            0
+            0
+            0.85rem;
 }
 
 p:last-child {
@@ -443,26 +737,35 @@ p:last-child {
 
 strong,
 b {
-    color: var(--heading);
+    color:
+            var(--heading);
 }
 
 hr {
     height: 2px;
-    margin: 23px 0;
+
+    margin:
+            23px
+            0;
+
     border: 0;
-    background: linear-gradient(
-            90deg,
-            transparent,
-            var(--coral),
-            var(--purple),
-            var(--cyan),
-            transparent
-    );
+
+    background:
+            linear-gradient(
+                    90deg,
+                    transparent,
+                    var(--coral),
+                    var(--purple),
+                    var(--cyan),
+                    transparent
+            );
+
     opacity: 0.45;
 }
 
+
 /* ==========================================================================
-   9. Nupud
+   9. NUPUD
    ========================================================================== */
 
 button,
@@ -471,17 +774,35 @@ input[type="submit"],
 input[type="button"],
 input[type="reset"] {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
+
     min-height: 44px;
-    padding: 10px 20px;
+
+    padding:
+            10px
+            20px;
+
     border: 0;
-    border-radius: var(--radius-pill);
-    color: var(--night);
-    background: var(--gradient-lime);
-    box-shadow: 0 10px 24px rgba(48, 207, 208, 0.24);
+
+    border-radius:
+            var(--radius-pill);
+
+    color:
+            var(--night);
+
+    background:
+            var(--gradient-lime);
+
+    box-shadow:
+            0 10px 24px
+            rgba(48, 207, 208, 0.24);
+
     font-weight: 700;
+
     cursor: pointer;
+
     transition:
             transform 180ms ease,
             box-shadow 180ms ease,
@@ -493,53 +814,53 @@ button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover {
-    box-shadow: var(--shadow-purple);
-    filter: saturate(1.15);
-    transform: translateY(-2px);
+    box-shadow:
+            var(--shadow-purple);
+
+    filter:
+            saturate(1.15);
+
+    transform:
+            translateY(-2px);
 }
+
 
 /* ==========================================================================
    10. GALERII
    ========================================================================== */
 
-/*
-   Kasuta sellist HTML-struktuuri:
-
-   <section class="gallery-section">
-     <h2>Pildigalerii</h2>
-
-     <div class="gallery">
-       <img src="pilt1.jpg" alt="Pilt 1">
-       <img src="pilt2.jpg" alt="Pilt 2">
-       <img src="pilt3.jpg" alt="Pilt 3">
-       <img src="pilt4.jpg" alt="Pilt 4">
-     </div>
-   </section>
-
-   .gallery peab olema ainult piltide ümbris.
-*/
-
-/* Galerii kaart */
 .gallery-section,
 .gallery-wrapper {
     width: 100%;
+
     margin: 0;
+
     padding: 27px;
-    border: 1px solid rgba(121, 87, 255, 0.2);
-    border-radius: var(--radius-medium);
+
+    border:
+            1px solid
+            rgba(121, 87, 255, 0.2);
+
+    border-radius:
+            var(--radius-medium);
+
     background:
             radial-gradient(
                     circle at 0% 0%,
                     rgba(201, 240, 90, 0.18),
                     transparent 19rem
             ),
+
             radial-gradient(
                     circle at 100% 100%,
                     rgba(232, 67, 147, 0.13),
                     transparent 19rem
             ),
+
             var(--surface);
-    box-shadow: var(--shadow-small);
+
+    box-shadow:
+            var(--shadow-small);
 }
 
 .gallery-section > h1,
@@ -548,115 +869,178 @@ input[type="reset"]:hover {
 .gallery-wrapper > h1,
 .gallery-wrapper > h2,
 .gallery-wrapper > h3 {
-    margin: 0 0 19px;
+    margin:
+            0
+            0
+            19px;
 }
 
-/*
-   PÕHIREGEL:
-   4 võrdset veergu tähendab, et 4 pilti on kõrvuti.
-   !important aitab varasemad katkised galerii-reeglid üle kirjutada.
-*/
+
+/* 4 pilti kõrvuti */
+
 .gallery {
     display: grid !important;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        ) !important;
+
     grid-auto-flow: row;
+
     align-items: stretch;
+
     gap: 14px;
+
     width: 100%;
+
     margin: 0 !important;
     padding: 0 !important;
+
     list-style: none;
 }
 
-/* Kõik otsesed galerii elemendid */
+
+/* Galerii otsesed elemendid */
+
 .gallery > * {
     display: block;
+
     width: 100%;
+
     min-width: 0;
+
     margin: 0 !important;
     padding: 0;
 }
 
-/* Pildid otse .gallery sees */
+
+/* Pildid */
+
 .gallery > img {
     height: 210px;
+
     border-radius: 14px;
+
     object-fit: cover;
-    box-shadow: 0 9px 20px rgba(31, 36, 82, 0.16);
+
+    box-shadow:
+            0 9px 20px
+            rgba(31, 36, 82, 0.16);
+
     transition:
             transform 250ms ease,
             filter 250ms ease,
             box-shadow 250ms ease;
 }
 
-/* Lingid galeriis */
+
+/* Lingiga pildid */
+
 .gallery > a {
     overflow: hidden;
+
     border-radius: 14px;
 }
 
 .gallery > a img {
     width: 100%;
     height: 210px;
+
     border-radius: 14px;
+
     object-fit: cover;
-    box-shadow: 0 9px 20px rgba(31, 36, 82, 0.16);
+
+    box-shadow:
+            0 9px 20px
+            rgba(31, 36, 82, 0.16);
+
     transition:
             transform 250ms ease,
             filter 250ms ease,
             box-shadow 250ms ease;
 }
 
-/* Figure elemendid galeriis */
+
+/* Figure */
+
 .gallery > figure {
     overflow: hidden;
+
     border-radius: 14px;
 }
 
 .gallery > figure img {
     width: 100%;
     height: 210px;
+
     border-radius: 14px;
+
     object-fit: cover;
-    box-shadow: 0 9px 20px rgba(31, 36, 82, 0.16);
+
+    box-shadow:
+            0 9px 20px
+            rgba(31, 36, 82, 0.16);
+
     transition:
             transform 250ms ease,
             filter 250ms ease,
             box-shadow 250ms ease;
 }
 
-/* Hover-efektid */
+
+/* Galerii hover */
+
 .gallery > img:hover,
 .gallery > a:hover img,
 .gallery > figure:hover img {
-    filter: saturate(1.18) contrast(1.04);
-    box-shadow: 0 17px 31px rgba(121, 87, 255, 0.32);
-    transform: scale(1.045);
+    filter:
+            saturate(1.18)
+            contrast(1.04);
+
+    box-shadow:
+            0 17px 31px
+            rgba(121, 87, 255, 0.32);
+
+    transform:
+            scale(1.045);
 }
 
-/* Galerii piltide värvilised alumised servad */
+
+/* Galerii värvilised ääred */
+
 .gallery > :nth-child(4n + 1) img,
 .gallery > :nth-child(4n + 1) {
-    border-bottom: 4px solid var(--purple);
+    border-bottom:
+            4px solid
+            var(--purple);
 }
 
 .gallery > :nth-child(4n + 2) img,
 .gallery > :nth-child(4n + 2) {
-    border-bottom: 4px solid var(--coral);
+    border-bottom:
+            4px solid
+            var(--coral);
 }
 
 .gallery > :nth-child(4n + 3) img,
 .gallery > :nth-child(4n + 3) {
-    border-bottom: 4px solid var(--cyan);
+    border-bottom:
+            4px solid
+            var(--cyan);
 }
 
 .gallery > :nth-child(4n + 4) img,
 .gallery > :nth-child(4n + 4) {
-    border-bottom: 4px solid var(--lime);
+    border-bottom:
+            4px solid
+            var(--lime);
 }
 
+
 /* ==========================================================================
-   11. Koodiplokid
+   11. KOODIPLOKID
    ========================================================================== */
 
 pre,
@@ -664,40 +1048,74 @@ pre[class*="language-"],
 .code-block,
 .terminal {
     position: relative;
-    margin: 22px 0;
-    padding: 55px 22px 22px;
+
+    margin:
+            22px
+            0;
+
+    padding:
+            55px
+            22px
+            22px;
+
     overflow-x: auto;
-    border: 1px solid rgba(201, 240, 90, 0.15);
+
+    border:
+            1px solid
+            rgba(201, 240, 90, 0.15);
+
     border-radius: 15px;
-    color: var(--code-text);
+
+    color:
+            var(--code-text);
+
     background:
             linear-gradient(
                     135deg,
                     rgba(121, 87, 255, 0.16),
                     transparent 45%
             ),
+
             var(--code-background);
 
-    /* Parandatud vari */
-    box-shadow: 0 20px 55px rgba(17, 21, 43, 0.24);
+    box-shadow:
+            0 20px 55px
+            rgba(17, 21, 43, 0.24);
 
-    font-family: "DM Mono", Consolas, monospace;
-    font-size: 0.88rem;
+    font-family:
+            "DM Mono",
+            Consolas,
+            monospace;
+
+    font-size:
+            0.88rem;
+
     line-height: 1.8;
+
     white-space: pre;
 }
+
+
+/* Koodiakna kolm täppi */
 
 pre::before,
 .code-block::before,
 .terminal::before {
     position: absolute;
+
     top: 20px;
     left: 22px;
+
     width: 11px;
     height: 11px;
+
     content: "";
+
     border-radius: 50%;
-    background: var(--coral);
+
+    background:
+            var(--coral);
+
     box-shadow:
             21px 0 var(--yellow),
             42px 0 var(--lime);
@@ -707,204 +1125,396 @@ pre::after,
 .code-block::after,
 .terminal::after {
     position: absolute;
+
     top: 15px;
     right: 22px;
+
     content: "•••";
-    color: var(--code-muted);
+
+    color:
+            var(--code-muted);
+
     letter-spacing: 3px;
 }
 
 code {
-    color: var(--code-pink);
-    font-family: "DM Mono", Consolas, monospace;
+    color:
+            var(--code-pink);
+
+    font-family:
+            "DM Mono",
+            Consolas,
+            monospace;
 }
 
 :not(pre) > code {
-    padding: 3px 7px;
+    padding:
+            3px
+            7px;
+
     border-radius: 6px;
-    color: var(--purple-dark);
-    background: rgba(121, 87, 255, 0.1);
+
+    color:
+            var(--purple-dark);
+
+    background:
+            rgba(121, 87, 255, 0.1);
 }
 
+
 /* ==========================================================================
-   12. Vormid ja tabelid
+   12. VORMID
    ========================================================================== */
 
 input,
 textarea,
 select {
     width: 100%;
-    padding: 11px 14px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius-small);
+
+    padding:
+            11px
+            14px;
+
+    border:
+            1px solid
+            var(--border);
+
+    border-radius:
+            var(--radius-small);
+
     outline: 0;
-    color: var(--heading);
-    background: var(--surface);
+
+    color:
+            var(--heading);
+
+    background:
+            var(--surface);
+
+    font-family:
+            inherit;
 }
 
 textarea {
     min-height: 125px;
+
     resize: vertical;
 }
 
 input:focus,
 textarea:focus,
 select:focus {
-    border-color: var(--purple);
-    box-shadow: 0 0 0 4px rgba(121, 87, 255, 0.14);
+    border-color:
+            var(--purple);
+
+    box-shadow:
+            0 0 0 4px
+            rgba(121, 87, 255, 0.14);
 }
+
+
+/* ==========================================================================
+   13. TABELID
+   ========================================================================== */
 
 table {
     width: 100%;
+
     border-collapse: collapse;
-    background: var(--surface);
+
+    background:
+            var(--surface);
 }
 
 th,
 td {
-    padding: 12px 15px;
-    border-bottom: 1px solid var(--border);
+    padding:
+            12px
+            15px;
+
+    border-bottom:
+            1px solid
+            var(--border);
+
     text-align: left;
 }
 
 th {
-    color: var(--heading);
-    background: var(--surface-purple);
+    color:
+            var(--heading);
+
+    background:
+            var(--surface-purple);
 }
 
+
 /* ==========================================================================
-   13. Jalus
+   14. JALUS
    ========================================================================== */
 
+/*
+   Väike fikseeritud jalus.
+   See ei võta enam kogu ekraani laiust ega kõrgust.
+*/
+
 footer {
-    width: 100%;
-    margin-top: 10px;
-    padding: 38px 20px;
-    color: #e9ecff;
+    position: fixed;
+
+    z-index: 90;
+
+    right: 20px;
+    bottom: 15px;
+    left: 20px;
+
+    width: auto;
+
+    margin: 0;
+
+    padding:
+            12px
+            24px;
+
+    border:
+            1px solid
+            rgba(255, 255, 255, 0.13);
+
+    border-radius:
+            17px;
+
+    color:
+            #e9ecff;
+
     background:
-            radial-gradient(
-                    circle at 10% 0%,
-                    rgba(201, 240, 90, 0.17),
-                    transparent 19rem
-            ),
-            radial-gradient(
-                    circle at 90% 0%,
-                    rgba(232, 67, 147, 0.25),
-                    transparent 21rem
-            ),
-            var(--night);
+            linear-gradient(
+                    100deg,
+                    rgba(17, 21, 43, 0.97),
+                    rgba(36, 27, 61, 0.97)
+            );
+
+    box-shadow:
+            0 12px 35px
+            rgba(17, 21, 43, 0.28);
+
+    backdrop-filter:
+            blur(14px);
+
+    -webkit-backdrop-filter:
+            blur(14px);
+
     text-align: center;
 }
 
+
+/* Jaluse värviline ülemine joon */
+
+footer::before {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 90px;
+    height: 3px;
+
+    content: "";
+
+    border-radius:
+            var(--radius-pill);
+
+    background:
+            var(--gradient-header);
+
+    transform:
+            translateX(-50%);
+}
+
+
 footer p {
     max-width: none;
+
     margin: 0;
-    color: #e9ecff;
-    font-size: 0.9rem;
+
+    color:
+            #e9ecff;
+
+    font-size:
+            0.82rem;
+
+    line-height: 1.3;
 }
 
 footer a {
-    color: var(--lime);
+    color:
+            var(--lime);
 }
 
+
 /* ==========================================================================
-   14. Responsive
+   15. RESPONSIVE - TABLET
    ========================================================================== */
 
-@media (max-width: 1240px) {
-    nav {
-        top: auto;
-        right: 50%;
-        bottom: 15px;
-        left: auto;
-        transform: translateX(50%);
+@media (max-width: 950px) {
+
+    .gallery {
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            ) !important;
+    }
+}
+
+
+/* ==========================================================================
+   16. TABLET / VÄIKE SÜLEARVUTI
+   ========================================================================== */
+
+@media (max-width: 800px) {
+
+    header,
+    main {
+        width:
+                min(
+                        calc(100% - 30px),
+                        var(--content-width)
+                );
     }
 
-    nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+    nav {
+        max-width:
+                calc(100% - 24px);
     }
 
     nav a {
-        min-width: auto;
-    }
+        padding:
+                7px
+                10px;
 
-    nav a::before {
-        display: none;
-    }
-
-    main {
-        padding-bottom: 105px;
+        font-size:
+                0.78rem;
     }
 }
 
-/* 3 pilti kõrvuti */
-@media (max-width: 950px) {
-    .gallery {
-        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-    }
-}
 
-/* 2 pilti kõrvuti */
+/* ==========================================================================
+   17. TELEFON
+   ========================================================================== */
+
 @media (max-width: 680px) {
+
     header,
     main {
-        width: min(calc(100% - 28px), var(--content-width));
+        width:
+                calc(100% - 28px);
     }
+
+
+    /* Päis */
 
     header {
         align-items: flex-start;
+
         flex-direction: column;
+
         gap: 18px;
+
         margin-top: 14px;
-        padding: 23px;
+
+        padding:
+                23px;
     }
 
     header .logo {
         align-self: flex-end;
     }
 
+
+    /* Menüü */
+
     nav {
         right: 9px;
-        bottom: 9px;
         left: 9px;
+
+        bottom: 61px;
+
+        width: auto;
         max-width: none;
+
+        transform:
+                none;
     }
 
     nav ul {
         width: 100%;
-        gap: 4px;
+
+        flex-direction: row;
+
+        flex-wrap: nowrap;
+
+        justify-content: center;
+
+        gap: 2px;
+    }
+
+    nav li {
+        flex: 1;
     }
 
     nav a {
-        flex: 1;
-        justify-content: center;
-        min-height: 39px;
-        padding: 7px 9px;
-        font-size: 0.75rem;
+        width: 100%;
+
+        min-height: 37px;
+
+        padding:
+                7px
+                5px;
+
+        font-size:
+                0.70rem;
     }
+
+    nav a::before {
+        display: none;
+    }
+
+
+    /* Põhisisu */
 
     main {
         gap: 15px;
+
         padding-top: 20px;
-        padding-bottom: 105px;
+
+        padding-bottom: 145px;
     }
+
+
+    /* Kaardid */
 
     main > section,
     main > article,
     main > div,
     .card {
-        padding: 22px 18px;
+        padding:
+                22px
+                18px;
     }
+
+
+    /* Galerii */
 
     .gallery-section,
     .gallery-wrapper {
-        padding: 19px;
+        padding:
+                19px;
     }
 
     .gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            ) !important;
+
         gap: 10px;
     }
 
@@ -914,42 +1524,154 @@ footer a {
         height: 175px;
     }
 
+
+    /* Kood */
+
     pre,
     pre[class*="language-"],
     .code-block,
     .terminal {
-        margin-inline: -2px;
-        padding: 53px 16px 18px;
-        font-size: 0.76rem;
+        margin-inline:
+                -2px;
+
+        padding:
+                53px
+                16px
+                18px;
+
+        font-size:
+                0.76rem;
+    }
+
+
+    /* Footer */
+
+    footer {
+        right: 10px;
+        bottom: 10px;
+        left: 10px;
+
+        padding:
+                10px
+                16px;
+
+        border-radius:
+                14px;
+    }
+
+    footer p {
+        font-size:
+                0.74rem;
     }
 }
 
-/* Väiksel telefonil jäävad kaks pilti endiselt kõrvuti */
+
+/* ==========================================================================
+   18. VÄIKE TELEFON
+   ========================================================================== */
+
 @media (max-width: 430px) {
+
     body {
-        font-size: 15px;
+        font-size:
+                15px;
     }
+
+
+    header {
+        padding:
+                20px;
+    }
+
+
+    header h1,
+    header h2,
+    header h3 {
+        font-size:
+                1.55rem;
+    }
+
+
+    /* Alumine menüü */
+
+    nav {
+        bottom: 57px;
+
+        padding:
+                5px;
+        border-radius:
+                15px;
+    }
+
+    nav a {
+        min-height:
+                35px;
+
+        padding:
+                6px
+                3px;
+
+        font-size:
+                0.65rem;
+
+        border-radius:
+                10px;
+    }
+
+
+    /* Sisu */
 
     .gallery-section,
     .gallery-wrapper {
-        padding: 14px;
+        padding:
+                14px;
     }
 
     .gallery {
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            ) !important;
+
         gap: 7px;
     }
 
     .gallery > img,
     .gallery > a img,
     .gallery > figure img {
-        height: 145px;
-        border-radius: 10px;
+        height:
+                145px;
+
+        border-radius:
+                10px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        right: 7px;
+        bottom: 7px;
+        left: 7px;
+
+        padding:
+                9px
+                12px;
+
+        border-radius:
+                12px;
+    }
+
+    footer p {
+        font-size:
+                0.68rem;
     }
 }
 
+
 /* ==========================================================================
-   15. Fookus ja vähendatud animatsioon
+   19. FOKUS
    ========================================================================== */
 
 button:focus-visible,
@@ -957,16 +1679,31 @@ a:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
 select:focus-visible {
-    outline: 3px solid rgba(48, 207, 208, 0.65);
-    outline-offset: 3px;
+    outline:
+            3px solid
+            rgba(48, 207, 208, 0.65);
+
+    outline-offset:
+            3px;
 }
 
+
+/* ==========================================================================
+   20. VÄHENDATUD ANIMATSIOON
+   ========================================================================== */
+
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
-        scroll-behavior: auto !important;
-        animation-duration: 0.01ms !important;
-        transition-duration: 0.01ms !important;
+        scroll-behavior:
+                auto !important;
+
+        animation-duration:
+                0.01ms !important;
+
+        transition-duration:
+                0.01ms !important;
     }
 }
