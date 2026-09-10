@@ -1,0 +1,972 @@
+/* ==========================================================================
+   OSCAR VEEBIRAKENDUSTE ALUSTE TÖÖD
+   Täielik korrastatud style.css
+   --------------------------------------------------------------------------
+   Eeldatav galerii HTML:
+
+   <section class="gallery-section">
+     <h2>Pildigalerii</h2>
+     <div class="gallery">
+       <img src="pilt1.jpg" alt="Pilt 1">
+       <img src="pilt2.jpg" alt="Pilt 2">
+       <img src="pilt3.jpg" alt="Pilt 3">
+       <img src="pilt4.jpg" alt="Pilt 4">
+     </div>
+   </section>
+
+   Oluline:
+   - .gallery peab sisaldama ainult galerii pilte.
+   - Ära pane .gallery klassi kogu lehele ega <section>-ile.
+   - Pildid paigutatakse alati CSS Gridiga kõrvuti.
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Fondid
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
+/* ==========================================================================
+   2. Värvid ja disainimuutujad
+   ========================================================================== */
+
+:root {
+    --night: #11152b;
+    --night-soft: #1a2140;
+    --night-light: #28345c;
+
+    --background: #e8eaff;
+    --background-dark: #cfd3f5;
+    --surface: #f7f5ff;
+    --surface-purple: #ece9ff;
+
+    --text: #303653;
+    --text-muted: #717895;
+    --heading: #171b3f;
+    --border: rgba(43, 48, 97, 0.16);
+
+    --purple: #7957ff;
+    --purple-dark: #5540d8;
+    --magenta: #e84393;
+    --coral: #ff6f61;
+    --cyan: #30cfd0;
+    --lime: #c9f05a;
+    --yellow: #ffd166;
+    --blue: #4e8cff;
+
+    --gradient-purple: linear-gradient(135deg, #5540d8, #9b5cff);
+    --gradient-magenta: linear-gradient(135deg, #e84393, #ff6f61);
+    --gradient-cyan: linear-gradient(135deg, #30cfd0, #4e8cff);
+    --gradient-lime: linear-gradient(135deg, #c9f05a, #30cfd0);
+    --gradient-header: linear-gradient(120deg, #5540d8, #e84393, #ff6f61);
+
+    --code-background: #15182d;
+    --code-surface: #20264a;
+    --code-text: #eef1ff;
+    --code-muted: #8992b8;
+    --code-green: #c9f05a;
+    --code-pink: #ff9fcf;
+    --code-blue: #8edcff;
+    --code-yellow: #ffe08a;
+
+    --shadow-small: 0 8px 20px rgba(31, 36, 82, 0.1);
+    --shadow-card: 0 18px 42px rgba(31, 36, 82, 0.15);
+    --shadow-purple: 0 15px 32px rgba(121, 87, 255, 0.28);
+
+    --radius-small: 10px;
+    --radius-medium: 17px;
+    --radius-large: 25px;
+    --radius-pill: 999px;
+
+    --content-width: 1100px;
+}
+
+/* ==========================================================================
+   3. Lähtestus
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    scroll-behavior: smooth;
+    background: var(--background);
+}
+
+body {
+    min-width: 320px;
+    margin: 0;
+    color: var(--text);
+    background:
+            radial-gradient(
+                    circle at 5% 0%,
+                    rgba(201, 240, 90, 0.24),
+                    transparent 24rem
+            ),
+            radial-gradient(
+                    circle at 95% 12%,
+                    rgba(232, 67, 147, 0.2),
+                    transparent 26rem
+            ),
+            linear-gradient(135deg, var(--background), var(--surface-purple));
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--purple-dark);
+    text-decoration: none;
+    transition:
+            color 180ms ease,
+            transform 180ms ease,
+            background 180ms ease;
+}
+
+a:hover {
+    color: var(--magenta);
+}
+
+::selection {
+    color: var(--night);
+    background: var(--lime);
+}
+
+/* ==========================================================================
+   4. Põhiline paigutus
+   ========================================================================== */
+
+header,
+main,
+footer {
+    width: min(calc(100% - 40px), var(--content-width));
+    margin-inline: auto;
+}
+
+main {
+    display: grid;
+    gap: 18px;
+    padding-block: 24px 55px;
+}
+
+/* ==========================================================================
+   5. Päis
+   ========================================================================== */
+
+header {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    min-height: 108px;
+    margin-top: 20px;
+    padding: 25px 30px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: var(--radius-large);
+    background:
+            linear-gradient(
+                    125deg,
+                    rgba(247, 245, 255, 0.92),
+                    rgba(236, 233, 255, 0.8)
+            );
+    box-shadow: var(--shadow-card);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+header::before {
+    position: absolute;
+    top: -100px;
+    right: -45px;
+    width: 280px;
+    height: 280px;
+    content: "";
+    border-radius: 50%;
+    background:
+            radial-gradient(circle at 30% 30%, var(--lime), transparent 30%),
+            radial-gradient(circle at 70% 60%, var(--magenta), transparent 45%);
+    opacity: 0.35;
+    filter: blur(14px);
+}
+
+header::after {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    width: 130px;
+    height: 5px;
+    content: "";
+    border-radius: var(--radius-pill);
+    background: var(--gradient-header);
+}
+
+header h1,
+header h2,
+header h3 {
+    position: relative;
+    z-index: 1;
+    flex: 1;
+    margin: 0;
+    color: transparent;
+    background: var(--gradient-header);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.35rem, 3vw, 2.4rem);
+    font-weight: 700;
+    letter-spacing: -0.06em;
+    line-height: 1.08;
+}
+
+header img,
+header svg,
+header .logo {
+    position: relative;
+    z-index: 1;
+    flex: 0 0 auto;
+    max-width: 150px;
+    max-height: 72px;
+    object-fit: contain;
+}
+
+header .logo {
+    display: grid;
+    width: 67px;
+    height: 67px;
+    place-items: center;
+    border: 3px solid rgba(255, 255, 255, 0.75);
+    border-radius: 21px;
+    color: var(--night);
+    background: var(--gradient-lime);
+    box-shadow: 0 14px 28px rgba(48, 207, 208, 0.24);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   6. Vasakpoolne navigatsioon
+   ========================================================================== */
+
+nav {
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 16px;
+    display: flex;
+    width: auto;
+    margin: 0;
+    padding: 9px;
+    border: 1px solid rgba(255, 255, 255, 0.68);
+    border-radius: 21px;
+    background: rgba(247, 245, 255, 0.82);
+    box-shadow: var(--shadow-card);
+    transform: translateY(-50%);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+nav::before {
+    position: absolute;
+    z-index: -1;
+    inset: 4px;
+    content: "";
+    border-radius: 17px;
+    background: linear-gradient(
+            180deg,
+            rgba(201, 240, 90, 0.2),
+            rgba(121, 87, 255, 0.13)
+    );
+}
+
+nav::after {
+    position: absolute;
+    top: 14px;
+    right: -3px;
+    bottom: 14px;
+    width: 4px;
+    content: "";
+    border-radius: var(--radius-pill);
+    background: var(--gradient-magenta);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-width: 150px;
+    min-height: 43px;
+    padding: 9px 14px;
+    border-radius: 13px;
+    color: var(--text-muted);
+    font-size: 0.86rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+nav a::before {
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    content: "";
+    border-radius: 50%;
+    background: var(--purple);
+    box-shadow: 0 0 0 4px rgba(121, 87, 255, 0.14);
+}
+
+nav a:hover {
+    color: var(--heading);
+    background: rgba(201, 240, 90, 0.42);
+    transform: translateX(4px);
+}
+
+nav a:hover::before {
+    background: var(--magenta);
+}
+
+nav a.active,
+nav a[aria-current="page"] {
+    color: var(--night);
+    background: var(--gradient-lime);
+    box-shadow: 0 9px 23px rgba(48, 207, 208, 0.25);
+}
+
+nav a.active::before,
+nav a[aria-current="page"]::before {
+    background: var(--night);
+}
+
+/* ==========================================================================
+   7. Tavalised sisukaardid
+   ========================================================================== */
+
+main > section,
+main > article,
+main > div,
+.card,
+section.card,
+article.card {
+    position: relative;
+    padding: clamp(23px, 3.5vw, 34px);
+    overflow: hidden;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+    background: rgba(247, 245, 255, 0.88);
+    box-shadow: var(--shadow-small);
+}
+
+main > section::before,
+main > article::before,
+main > div::before,
+.card::before,
+section.card::before,
+article.card::before {
+    position: absolute;
+    top: 0;
+    left: 28px;
+    width: 82px;
+    height: 5px;
+    content: "";
+    border-radius: 0 0 var(--radius-pill) var(--radius-pill);
+    background: var(--gradient-header);
+}
+
+/* ==========================================================================
+   8. Tüpograafia
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    color: var(--heading);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.045em;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.7rem);
+}
+
+h2 {
+    margin-bottom: 14px;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-size: clamp(1.25rem, 2vw, 1.65rem);
+}
+
+p {
+    max-width: 75ch;
+    margin: 0 0 0.85rem;
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+strong,
+b {
+    color: var(--heading);
+}
+
+hr {
+    height: 2px;
+    margin: 23px 0;
+    border: 0;
+    background: linear-gradient(
+            90deg,
+            transparent,
+            var(--coral),
+            var(--purple),
+            var(--cyan),
+            transparent
+    );
+    opacity: 0.45;
+}
+
+/* ==========================================================================
+   9. Nupud
+   ========================================================================== */
+
+button,
+.button,
+input[type="submit"],
+input[type="button"],
+input[type="reset"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 20px;
+    border: 0;
+    border-radius: var(--radius-pill);
+    color: var(--night);
+    background: var(--gradient-lime);
+    box-shadow: 0 10px 24px rgba(48, 207, 208, 0.24);
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+            transform 180ms ease,
+            box-shadow 180ms ease,
+            filter 180ms ease;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    box-shadow: var(--shadow-purple);
+    filter: saturate(1.15);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   10. GALERII
+   ========================================================================== */
+
+/*
+   Kasuta sellist HTML-struktuuri:
+
+   <section class="gallery-section">
+     <h2>Pildigalerii</h2>
+
+     <div class="gallery">
+       <img src="pilt1.jpg" alt="Pilt 1">
+       <img src="pilt2.jpg" alt="Pilt 2">
+       <img src="pilt3.jpg" alt="Pilt 3">
+       <img src="pilt4.jpg" alt="Pilt 4">
+     </div>
+   </section>
+
+   .gallery peab olema ainult piltide ümbris.
+*/
+
+/* Galerii kaart */
+.gallery-section,
+.gallery-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 27px;
+    border: 1px solid rgba(121, 87, 255, 0.2);
+    border-radius: var(--radius-medium);
+    background:
+            radial-gradient(
+                    circle at 0% 0%,
+                    rgba(201, 240, 90, 0.18),
+                    transparent 19rem
+            ),
+            radial-gradient(
+                    circle at 100% 100%,
+                    rgba(232, 67, 147, 0.13),
+                    transparent 19rem
+            ),
+            var(--surface);
+    box-shadow: var(--shadow-small);
+}
+
+.gallery-section > h1,
+.gallery-section > h2,
+.gallery-section > h3,
+.gallery-wrapper > h1,
+.gallery-wrapper > h2,
+.gallery-wrapper > h3 {
+    margin: 0 0 19px;
+}
+
+/*
+   PÕHIREGEL:
+   4 võrdset veergu tähendab, et 4 pilti on kõrvuti.
+   !important aitab varasemad katkised galerii-reeglid üle kirjutada.
+*/
+.gallery {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-auto-flow: row;
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none;
+}
+
+/* Kõik otsesed galerii elemendid */
+.gallery > * {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin: 0 !important;
+    padding: 0;
+}
+
+/* Pildid otse .gallery sees */
+.gallery > img {
+    height: 210px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 9px 20px rgba(31, 36, 82, 0.16);
+    transition:
+            transform 250ms ease,
+            filter 250ms ease,
+            box-shadow 250ms ease;
+}
+
+/* Lingid galeriis */
+.gallery > a {
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gallery > a img {
+    width: 100%;
+    height: 210px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 9px 20px rgba(31, 36, 82, 0.16);
+    transition:
+            transform 250ms ease,
+            filter 250ms ease,
+            box-shadow 250ms ease;
+}
+
+/* Figure elemendid galeriis */
+.gallery > figure {
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.gallery > figure img {
+    width: 100%;
+    height: 210px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 9px 20px rgba(31, 36, 82, 0.16);
+    transition:
+            transform 250ms ease,
+            filter 250ms ease,
+            box-shadow 250ms ease;
+}
+
+/* Hover-efektid */
+.gallery > img:hover,
+.gallery > a:hover img,
+.gallery > figure:hover img {
+    filter: saturate(1.18) contrast(1.04);
+    box-shadow: 0 17px 31px rgba(121, 87, 255, 0.32);
+    transform: scale(1.045);
+}
+
+/* Galerii piltide värvilised alumised servad */
+.gallery > :nth-child(4n + 1) img,
+.gallery > :nth-child(4n + 1) {
+    border-bottom: 4px solid var(--purple);
+}
+
+.gallery > :nth-child(4n + 2) img,
+.gallery > :nth-child(4n + 2) {
+    border-bottom: 4px solid var(--coral);
+}
+
+.gallery > :nth-child(4n + 3) img,
+.gallery > :nth-child(4n + 3) {
+    border-bottom: 4px solid var(--cyan);
+}
+
+.gallery > :nth-child(4n + 4) img,
+.gallery > :nth-child(4n + 4) {
+    border-bottom: 4px solid var(--lime);
+}
+
+/* ==========================================================================
+   11. Koodiplokid
+   ========================================================================== */
+
+pre,
+pre[class*="language-"],
+.code-block,
+.terminal {
+    position: relative;
+    margin: 22px 0;
+    padding: 55px 22px 22px;
+    overflow-x: auto;
+    border: 1px solid rgba(201, 240, 90, 0.15);
+    border-radius: 15px;
+    color: var(--code-text);
+    background:
+            linear-gradient(
+                    135deg,
+                    rgba(121, 87, 255, 0.16),
+                    transparent 45%
+            ),
+            var(--code-background);
+
+    /* Parandatud vari */
+    box-shadow: 0 20px 55px rgba(17, 21, 43, 0.24);
+
+    font-family: "DM Mono", Consolas, monospace;
+    font-size: 0.88rem;
+    line-height: 1.8;
+    white-space: pre;
+}
+
+pre::before,
+.code-block::before,
+.terminal::before {
+    position: absolute;
+    top: 20px;
+    left: 22px;
+    width: 11px;
+    height: 11px;
+    content: "";
+    border-radius: 50%;
+    background: var(--coral);
+    box-shadow:
+            21px 0 var(--yellow),
+            42px 0 var(--lime);
+}
+
+pre::after,
+.code-block::after,
+.terminal::after {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    content: "•••";
+    color: var(--code-muted);
+    letter-spacing: 3px;
+}
+
+code {
+    color: var(--code-pink);
+    font-family: "DM Mono", Consolas, monospace;
+}
+
+:not(pre) > code {
+    padding: 3px 7px;
+    border-radius: 6px;
+    color: var(--purple-dark);
+    background: rgba(121, 87, 255, 0.1);
+}
+
+/* ==========================================================================
+   12. Vormid ja tabelid
+   ========================================================================== */
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+    outline: 0;
+    color: var(--heading);
+    background: var(--surface);
+}
+
+textarea {
+    min-height: 125px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 4px rgba(121, 87, 255, 0.14);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--surface);
+}
+
+th,
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    color: var(--heading);
+    background: var(--surface-purple);
+}
+
+/* ==========================================================================
+   13. Jalus
+   ========================================================================== */
+
+footer {
+    width: 100%;
+    margin-top: 10px;
+    padding: 38px 20px;
+    color: #e9ecff;
+    background:
+            radial-gradient(
+                    circle at 10% 0%,
+                    rgba(201, 240, 90, 0.17),
+                    transparent 19rem
+            ),
+            radial-gradient(
+                    circle at 90% 0%,
+                    rgba(232, 67, 147, 0.25),
+                    transparent 21rem
+            ),
+            var(--night);
+    text-align: center;
+}
+
+footer p {
+    max-width: none;
+    margin: 0;
+    color: #e9ecff;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--lime);
+}
+
+/* ==========================================================================
+   14. Responsive
+   ========================================================================== */
+
+@media (max-width: 1240px) {
+    nav {
+        top: auto;
+        right: 50%;
+        bottom: 15px;
+        left: auto;
+        transform: translateX(50%);
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        min-width: auto;
+    }
+
+    nav a::before {
+        display: none;
+    }
+
+    main {
+        padding-bottom: 105px;
+    }
+}
+
+/* 3 pilti kõrvuti */
+@media (max-width: 950px) {
+    .gallery {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
+}
+
+/* 2 pilti kõrvuti */
+@media (max-width: 680px) {
+    header,
+    main {
+        width: min(calc(100% - 28px), var(--content-width));
+    }
+
+    header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+        margin-top: 14px;
+        padding: 23px;
+    }
+
+    header .logo {
+        align-self: flex-end;
+    }
+
+    nav {
+        right: 9px;
+        bottom: 9px;
+        left: 9px;
+        max-width: none;
+    }
+
+    nav ul {
+        width: 100%;
+        gap: 4px;
+    }
+
+    nav a {
+        flex: 1;
+        justify-content: center;
+        min-height: 39px;
+        padding: 7px 9px;
+        font-size: 0.75rem;
+    }
+
+    main {
+        gap: 15px;
+        padding-top: 20px;
+        padding-bottom: 105px;
+    }
+
+    main > section,
+    main > article,
+    main > div,
+    .card {
+        padding: 22px 18px;
+    }
+
+    .gallery-section,
+    .gallery-wrapper {
+        padding: 19px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px;
+    }
+
+    .gallery > img,
+    .gallery > a img,
+    .gallery > figure img {
+        height: 175px;
+    }
+
+    pre,
+    pre[class*="language-"],
+    .code-block,
+    .terminal {
+        margin-inline: -2px;
+        padding: 53px 16px 18px;
+        font-size: 0.76rem;
+    }
+}
+
+/* Väiksel telefonil jäävad kaks pilti endiselt kõrvuti */
+@media (max-width: 430px) {
+    body {
+        font-size: 15px;
+    }
+
+    .gallery-section,
+    .gallery-wrapper {
+        padding: 14px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 7px;
+    }
+
+    .gallery > img,
+    .gallery > a img,
+    .gallery > figure img {
+        height: 145px;
+        border-radius: 10px;
+    }
+}
+
+/* ==========================================================================
+   15. Fookus ja vähendatud animatsioon
+   ========================================================================== */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid rgba(48, 207, 208, 0.65);
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
