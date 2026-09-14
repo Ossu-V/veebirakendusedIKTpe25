@@ -67,3 +67,16 @@ table#gold td{
 #gold tr:nth-child(3) td:nth-child(3){
     background-color: coral;
 }
+
+table#iseseisev{
+    border: 1px solid crimson;
+    width: 30%;
+    height: 200px;
+}
+table#iseseisev td{
+    border: 1px solid crimson;
+    text-align: center;
+}
+table#iseseisev td:nth-child(1) td:nth-child(2){
+    height: 150px;
+}
