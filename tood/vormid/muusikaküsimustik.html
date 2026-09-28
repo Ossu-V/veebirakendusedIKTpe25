@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Muusika küsimustik</title>
+    <script src="../js/muusikaküsimustikScript.js"></script>
+</head>
+<body>
+<h1>Muusika küsimustik</h1>
+<form action="#">
+    <table border="1">
+        <tr>
+            <td>
+                <label for="arvamus">Mida arvad muusika kuulamisest koolis?</label>
+            </td>
+            <td>
+                <input type="text" id="arvamus" oninput="arvamusLugemine()">
+            </td>
+            <td>
+                <div id="vastus"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Kas sa kuulad raadiot?</label>
+            </td>
+            <td colspan="2">
+                <fieldset>
+                    <br>
+                    <input type="checkbox" name="jahei" id="jah" value="jah" onclick="jaheiValik()">
+                    <label for="jah">jah</label>
+                    <br>
+                    <input type="checkbox" name="jahei" id="ei" value="ei" onclick="jaheiValik()">
+                    <label for="ei">ei</label>
+                </fieldset>
+            </td>
+            <td>
+                <div id="vastus2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Millist muusikat sa kõige rohkem kuulad?</label>
+            </td>
+            <td>
+                <input type="radio" name="millst" id="rock" value="rock">
+                <label for="rock">rock</label>
+                <br>
+                <input type="radio" name="millst" id="rap" value="rap">
+                <label for="rap">rap</label>
+                <br>
+                <input type="radio" name="millst" id="Classical" value="Classical">
+                <label for="Classical">Classical</label>
+                <br>
+                <input type="radio" name="millst" id="hiphop" value="hiphop">
+                <label for="hiphop">hiphop</label>
+                <br>
+                <input type="radio" name="millst" id="lofi" value="lofi">
+                <label for="lofi">lofi</label>
+                <br>
+                <input type="radio" name="millst" id="jazz" value="jazz">
+                <label for="jazz">jazz</label>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
