@@ -70,15 +70,52 @@ function sportValik(){
     return sport;
 }
 
+function klubiValik(){
+    let vastus5=document.getElementById("vastus5");
+    let klubi=document.getElementById("klubi");
+
+    //1.rida loendis - see on 0.rida js
+    if(klubi.selectedIndex!==0){
+        vastus5.innerHTML="Valitud spordi kulbi on: " + klubi.value;
+        vastus5.style.color="red";
+
+    }
+    return klubi.value;
+}
+
+function kuupaevValik(){
+    let vastus6=document.getElementById("vastus6");
+    let kuupaev=document.getElementById("kuupaev");
+
+    vastus6.innerHTML="Viimane külastus oli " + kuupaev.value;
+    vastus6.style.color="red";
+
+    return kuupaev.value;
+}
+
+function rangeValik(){
+    let vastus7=document.getElementById("vastus7");
+    let kogemus=document.getElementById("kogemus");
+
+    vastus7.innerHTML="Sa valisid " + kogemus.value + "aastat";
+    vastus7.style.color="red";
+
+    return kogemus.value;
+}
+
 function tervitus(){
     let vastus4=document.getElementById("vastus4");
     let nimi=nimiLugemine();
     let sugu=suguValik();
     let spordiala=sportValik();
+    let klubi=klubiValik();
+    let kuupaev=kuupaevValik();
 
-    vastus4.innerHTML='Sisestatud nimi on '+nimi+"<br>"
-        +'Valitud sugu on ' +sugu+"<br>"
-        +'Valitud sporidala: '+spordiala;
+    vastus4.innerHTML='Sisestatud nimi on ' + nimi + "<br>"
+        + 'Valitud sugu on ' + sugu + "<br>"
+        + 'Valitud sporidala: ' + spordiala + '<br>'
+    + 'Valitud klubi: ' + klubi + ' <br> '
+    + 'Valitud kuupaev: ' + kuupaev.value;
     vastus4.style.backgroundColor="yellow";
 }
 

@@ -17,49 +17,61 @@
                 <input type="text" id="arvamus" oninput="arvamusLugemine()">
             </td>
             <td>
-                <div id="vastus"></div>
+                <div id="vastus1"></div>
             </td>
         </tr>
         <tr>
             <td>
                 <label>Kas sa kuulad raadiot?</label>
             </td>
-            <td colspan="2">
-                <fieldset>
-                    <br>
-                    <input type="checkbox" name="jahei" id="jah" value="jah" onclick="jaheiValik()">
-                    <label for="jah">jah</label>
-                    <br>
-                    <input type="checkbox" name="jahei" id="ei" value="ei" onclick="jaheiValik()">
-                    <label for="ei">ei</label>
-                </fieldset>
+            <td>
+                <input type="radio" name="jahei" id="jah" value="jah" onclick="jaheiValik()">
+                <label for="jah">jah</label>
+                <br>
+                <input type="radio" name="jahei" id="ei" value="ei" onclick="jaheiValik()">
+                <label for="ei">ei</label>
             </td>
             <td>
                 <div id="vastus2"></div>
             </td>
         </tr>
         <tr>
-            <td>
-                <label>Millist muusikat sa kõige rohkem kuulad?</label>
+            <td colspan="2">
+                <fieldset>
+                    <label>Millist muusikat sa kõige rohkem kuulad?</label>
+                    <br>
+                    <input type="checkbox" name="millst" id="rock" value="rock" onclick="muusikaValik()">
+                    <label for="rock">rock</label>
+                    <br>
+                    <input type="checkbox" name="millst" id="rap" value="rap" onclick="muusikaValik()">
+                    <label for="rap">rap</label>
+                    <br>
+                    <input type="checkbox" name="millst" id="Classical" value="Classical" onclick="muusikaValik()">
+                    <label for="Classical">Classical</label>
+                    <br>
+                    <input type="checkbox" name="millst" id="hiphop" value="hiphop" onclick="muusikaValik()">
+                    <label for="hiphop">hiphop</label>
+                    <br>
+                    <input type="checkbox" name="millst" id="lofi" value="lofi" onclick="muusikaValik()">
+                    <label for="lofi">lofi</label>
+                    <br>
+                    <input type="checkbox" name="millst" id="jazz" value="jazz" onclick="muusikaValik()">
+                    <label for="jazz">jazz</label>
+                </fieldset>
             </td>
             <td>
-                <input type="radio" name="millst" id="rock" value="rock">
-                <label for="rock">rock</label>
-                <br>
-                <input type="radio" name="millst" id="rap" value="rap">
-                <label for="rap">rap</label>
-                <br>
-                <input type="radio" name="millst" id="Classical" value="Classical">
-                <label for="Classical">Classical</label>
-                <br>
-                <input type="radio" name="millst" id="hiphop" value="hiphop">
-                <label for="hiphop">hiphop</label>
-                <br>
-                <input type="radio" name="millst" id="lofi" value="lofi">
-                <label for="lofi">lofi</label>
-                <br>
-                <input type="radio" name="millst" id="jazz" value="jazz">
-                <label for="jazz">jazz</label>
+                <div id="vastus3"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="reset" value="Puhasta" onclick="puhasta()">
+            </td>
+            <td>
+                <input type="button" value="Näita andmed" onclick="tervitus()">
+            </td>
+            <td>
+                <div id="vastus4"></div>
             </td>
         </tr>
     </table>

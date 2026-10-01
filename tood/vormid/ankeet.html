@@ -82,7 +82,7 @@
           <label for="klubi">Mis klubi sa külastad</label>
         </td>
         <td>
-          <select name="klubi" id="klubi">
+          <select name="klubi" id="klubi" onchange="klubiValik()">
             <option value="vali">vali...</option>
             <option value="gym">GYM</option>
             <option value="myfitness">myFitness</option>
@@ -90,6 +90,9 @@
             <option value="kalevspa">KalevSPA</option>
           </select>
         </td>
+          <td>
+              <div id="vastus5"></div>
+          </td>
       </tr>
       <tr>
         <td>
@@ -104,8 +107,22 @@
           <label for="kuupaev">Millal oli su viimane trenn</label>
         </td>
         <td>
-          <input type="date" id="kuupaev" min="2026-01-01" max="2026-12-31">
+          <input type="date" id="kuupaev" min="2026-01-01" max="2026-12-31" onchange="kuupaevValik()">
         </td>
+          <td>
+              <div id="vastus6"></div>
+          </td>
+      </tr>
+      <tr>
+          <td>
+              <label for="kogemus">Treening kogemus:</label>
+          </td>
+          <td>
+              <input type="range" id="kogemus" min="0" max="24" onchange="rangeValik()">
+          </td>
+          <td>
+              <div id="vastus7"></div>
+          </td>
       </tr>
       <tr>
         Kasuta w3school ja proovi ise input type=tel, file, password, vali ise 5 erinevat tk
