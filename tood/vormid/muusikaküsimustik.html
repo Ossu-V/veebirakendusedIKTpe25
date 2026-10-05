@@ -40,27 +40,63 @@
                 <fieldset>
                     <label>Millist muusikat sa kõige rohkem kuulad?</label>
                     <br>
-                    <input type="checkbox" name="millst" id="rock" value="rock" onclick="muusikaValik()">
+                    <input type="checkbox" name="muusika" id="rock" value="rock" onclick="muusikaValik()">
                     <label for="rock">rock</label>
                     <br>
-                    <input type="checkbox" name="millst" id="rap" value="rap" onclick="muusikaValik()">
+                    <input type="checkbox" name="muusika" id="rap" value="rap" onclick="muusikaValik()">
                     <label for="rap">rap</label>
                     <br>
-                    <input type="checkbox" name="millst" id="Classical" value="Classical" onclick="muusikaValik()">
+                    <input type="checkbox" name="muusika" id="Classical" value="Classical" onclick="muusikaValik()">
                     <label for="Classical">Classical</label>
                     <br>
-                    <input type="checkbox" name="millst" id="hiphop" value="hiphop" onclick="muusikaValik()">
+                    <input type="checkbox" name="muusika" id="hiphop" value="hiphop" onclick="muusikaValik()">
                     <label for="hiphop">hiphop</label>
                     <br>
-                    <input type="checkbox" name="millst" id="lofi" value="lofi" onclick="muusikaValik()">
+                    <input type="checkbox" name="muusika" id="lofi" value="lofi" onclick="muusikaValik()">
                     <label for="lofi">lofi</label>
                     <br>
-                    <input type="checkbox" name="millst" id="jazz" value="jazz" onclick="muusikaValik()">
+                    <input type="checkbox" name="muusika" id="jazz" value="jazz" onclick="muusikaValik()">
                     <label for="jazz">jazz</label>
                 </fieldset>
             </td>
             <td>
                 <div id="vastus3"></div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label for="kuulamine">Mitu tundi päevas sa kuulad muusikat?</label>
+            </td>
+            <td>
+                <input type="range" id="kuulamine" min="0" max="24" onchange="rangeValik()">
+            </td>
+            <td>
+                <div id="vastus4"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <fieldset>
+                    <label>Milliseid muusikuid/ansambleid sa tead?</label>
+                    <br>
+                    <input type="checkbox" name="muusikud" id="Nublu" value="Nublu" onclick="muusikuteValik()">
+                    <label for="Nublu">Nublu</label>
+                    <br>
+                    <input type="checkbox" name="muusikud" id="TommyCash" value="TommyCash" onclick="muusikuteValik()">
+                    <label for="TommyCash">TommyCash</label>
+                    <br>
+                    <input type="checkbox" name="muusikud" id="ElinaBorn" value="ElinaBorn" onclick="muusikuteValik()">
+                    <label for="ElinaBorn">Elina Born</label>
+                    <br>
+                    <input type="checkbox" name="muusikud" id="KoitToome" value="KoitToome" onclick="muusikuteValik()">
+                    <label for="KoitToome">Koit Toome</label>
+                    <br>
+                    <input type="checkbox" name="muusikud" id="Lenna" value="Lenna" onclick="muusikuteValik()">
+                    <label for="Lenna">Lenna</label>
+                </fieldset>
+            </td>
+            <td>
+                <div id="vastus5"></div>
             </td>
         </tr>
         <tr>
@@ -71,7 +107,7 @@
                 <input type="button" value="Näita andmed" onclick="tervitus()">
             </td>
             <td>
-                <div id="vastus4"></div>
+                <div id="vastus6"></div>
             </td>
         </tr>
     </table>

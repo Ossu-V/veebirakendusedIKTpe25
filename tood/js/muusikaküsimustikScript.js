@@ -65,15 +65,60 @@ function muusikaValik(){
     return muusika;
 }
 
-function tervitus(){
+function rangeValik(){
     let vastus4=document.getElementById("vastus4");
+    let kuulamine=document.getElementById("kuulamine");
+
+    vastus4.innerHTML="Sa kuulad muusikat " + kuulamine.value + " tundi päevas";
+
+    return kuulamine.value;
+}
+
+function muusikuteValik(){
+    let vastus5=document.getElementById("vastus5");
+    let Nublu=document.getElementById("Nublu");
+    let TommyCash=document.getElementById("TommyCash");
+    let ElinaBorn=document.getElementById("ElinaBorn");
+    let KoitToome=document.getElementById("KoitToome");
+    let Lenna=document.getElementById("Lenna");
+
+    let muusikud="";
+    if(Nublu.checked){
+        muusikud +=Nublu.value + ", ";
+    }
+    if(TommyCash.checked){
+        muusikud +=TommyCash.value + ", ";
+    }
+    if(ElinaBorn.checked){
+        muusikud +=ElinaBorn.value + ", ";
+    }
+    if(KoitToome.checked){
+        muusikud +=KoitToome.value + ", ";
+    }
+    if(Lenna.checked){
+        muusikud +=Lenna.value + ", ";
+    }
+    if(muusikud==""){
+        muusikud="sa ei tea muusikuid/ansambleid";
+    }
+    vastus5.innerHTML="Sinu valitud muusik(ud): " + muusikud;
+
+    return muusikud;
+}
+
+function tervitus(){
+    let vastus6=document.getElementById("vastus6");
     let arvamus=arvamusLugemine();
     let jahei=jaheiValik();
     let muusika=muusikaValik();
+    let kuulamine=rangeValik();
+    let muusikud=muusikuteValik();
 
-    vastus4.innerHTML='Sinu arvamus: ' + arvamus + "<br>"
+    vastus6.innerHTML='Sinu arvamus: ' + arvamus + "<br>"
         + 'Raadio kuulamine: ' + jahei + "<br>"
-        + 'Valitud stiil(id): ' + muusika;
+        + 'Valitud stiil(id): ' + muusika + "<br>"
+        + 'Kuulad muusikat ' + kuulamine + ' tundi ' + "<br>"
+        + 'Sinu valitud muusikud ' + muusikud;
 }
 
 function puhasta(){
@@ -81,4 +126,6 @@ function puhasta(){
     vastus2.innerHTML="";
     vastus3.innerHTML="";
     vastus4.innerHTML="";
+    vastus5.innerHTML="";
+    vastus6.innerHTML="";
 }
