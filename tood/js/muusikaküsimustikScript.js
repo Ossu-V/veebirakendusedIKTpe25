@@ -11,16 +11,20 @@ function jaheiValik(){
     let vastus2=document.getElementById("vastus2");
     let jah=document.getElementById("jah");
     let ei=document.getElementById("ei");
+    let pilt=document.getElementById("pilt");
 
     let jahei="";
     if(jah.checked){
         jahei=jah.value;
+        pilt.src="../pildid/Smiley.png";
     }
     else if(ei.checked){
         jahei=ei.value;
+        pilt.src="../pildid/Frowning.png";
     }
     else{
         jahei="palun vali arvamus";
+        pilt.src="../pildid/tyhi.png";
     }
 
     vastus2.innerHTML="Raadio kuulamine: " + jahei;
@@ -81,25 +85,32 @@ function muusikuteValik(){
     let ElinaBorn=document.getElementById("ElinaBorn");
     let KoitToome=document.getElementById("KoitToome");
     let Lenna=document.getElementById("Lenna");
+    let pilt2=document.getElementById("pilt2");
 
     let muusikud="";
     if(Nublu.checked){
         muusikud +=Nublu.value + ", ";
+        pilt2.src="../pildid/nublu.png";
     }
     if(TommyCash.checked){
         muusikud +=TommyCash.value + ", ";
+        pilt2.src="../pildid/tommycash.png";
     }
     if(ElinaBorn.checked){
         muusikud +=ElinaBorn.value + ", ";
+        pilt2.src="../pildid/elinaborn.jpg";
     }
     if(KoitToome.checked){
         muusikud +=KoitToome.value + ", ";
+        pilt2.src="../pildid/koittoome.jpg";
     }
     if(Lenna.checked){
         muusikud +=Lenna.value + ", ";
+        pilt2.src="../pildid/lenna.jpg";
     }
     if(muusikud==""){
         muusikud="sa ei tea muusikuid/ansambleid";
+        pilt2.src="../pildid/tyhi.png";
     }
     vastus5.innerHTML="Sinu valitud muusik(ud): " + muusikud;
 
