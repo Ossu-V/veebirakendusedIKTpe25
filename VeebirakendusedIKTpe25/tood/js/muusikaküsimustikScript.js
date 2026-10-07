@@ -106,7 +106,7 @@ function muusikuteValik(){
     }
     if(Lenna.checked){
         muusikud +=Lenna.value + ", ";
-        pilt2.src="../pildid/lenna.jpg";
+        pilt2.src="../pildid/lenna.png";
     }
     if(muusikud==""){
         muusikud="sa ei tea muusikuid/ansambleid";
