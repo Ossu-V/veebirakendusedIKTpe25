@@ -5,12 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/saiakalkScript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/vormid/kalk.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -24,71 +34,12 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Ossu-V/veebirakendusedIKTpe25.git&quot;,
-    &quot;accountId&quot;: &quot;7b7bcf4a-be6c-4ef2-9c6b-5ab94bffa2cf&quot;
+    &quot;accountId&quot;: &quot;c06b4107-1c49-43c8-bf66-55d126241357&quot;
   }
 }</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
-  </component>
-  <component name="NextEditCompletionFeaturesState">
-    <decayedCancelled>
-      <entry key="MS100" value="1.4599698961594259" />
-      <entry key="MS500" value="2.92220805336327" />
-      <entry key="S2" value="5.361525981110562" />
-      <entry key="S5" value="8.412679629428748" />
-      <entry key="S10" value="12.251609545204214" />
-      <entry key="S30" value="30.808073039110194" />
-      <entry key="S60" value="48.23380233427652" />
-      <entry key="M2" value="65.34190753175218" />
-      <entry key="M5" value="85.74860225220995" />
-      <entry key="M10" value="96.88521421055532" />
-      <entry key="M15" value="101.40102823047256" />
-      <entry key="M30" value="106.4154938477934" />
-      <entry key="H1" value="109.13162794027815" />
-      <entry key="H2" value="110.54613824218742" />
-      <entry key="H4" value="111.26806693885915" />
-      <entry key="D1" value="111.87730922338191" />
-      <entry key="W1" value="111.98245546148418" />
-    </decayedCancelled>
-    <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="0.0" />
-      <entry key="S10" value="0.0" />
-      <entry key="S30" value="0.0" />
-      <entry key="S60" value="0.0" />
-      <entry key="M2" value="0.0" />
-      <entry key="M5" value="0.0" />
-      <entry key="M10" value="0.0" />
-      <entry key="M15" value="0.0" />
-      <entry key="M30" value="0.0" />
-      <entry key="H1" value="0.0" />
-      <entry key="H2" value="0.0" />
-      <entry key="H4" value="0.0" />
-      <entry key="D1" value="0.0" />
-      <entry key="W1" value="0.0" />
-    </decayedSelected>
-    <decayedShown>
-      <entry key="MS100" value="1.4006140277123322" />
-      <entry key="MS500" value="2.898419260455259" />
-      <entry key="S2" value="5.3454321676398795" />
-      <entry key="S5" value="8.400211235914487" />
-      <entry key="S10" value="12.242063814823023" />
-      <entry key="S30" value="30.800444629586988" />
-      <entry key="S60" value="48.22730503664998" />
-      <entry key="M2" value="65.33591367135541" />
-      <entry key="M5" value="85.7439498742993" />
-      <entry key="M10" value="96.88214005128215" />
-      <entry key="M15" value="101.3987658682842" />
-      <entry key="M30" value="106.41424168202914" />
-      <entry key="H1" value="109.13096856781728" />
-      <entry key="H2" value="110.54579982238573" />
-      <entry key="H4" value="111.26789549212094" />
-      <entry key="D1" value="111.8772803336189" />
-      <entry key="W1" value="111.9824513265924" />
-    </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8,
@@ -101,9 +52,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -117,13 +71,14 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true"
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-WS-262.10968.77" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.27812.50" />
       </set>
     </attachedChunks>
   </component>
@@ -134,8 +89,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1791389478024</updated>
-      <workItem from="1791389479073" duration="645000" />
-      <workItem from="1791741137032" duration="801000" />
+      <workItem from="1791389479073" duration="312000" />
+      <workItem from="1791437936825" duration="49000" />
+      <workItem from="1791437986587" duration="3710000" />
     </task>
     <servers />
   </component>
