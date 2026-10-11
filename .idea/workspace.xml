@@ -1,59 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Uss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kontakt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kujundus2/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kujundus2/Uss.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kujundus2/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kujundus2/kontakt.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kujundus2/lingid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kujundus2/meedia.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kujundus2/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kujundus2/tehtud.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lingid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/meedia.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tehtud.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/js/ankeetScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/js/muusikaküsimustikScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/js/piltScript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/lipudStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/aken.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/iseseisevmapkaart.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/katus.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/korsten.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/lennuk.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/maja.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/mapStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/paike.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/puu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/puutüvi.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/püramiid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/maparea/ratas.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/paberiulesanne.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/Frowning.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/Smiley.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/koittoome.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/nublu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/piltStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/piltideVahetus.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/tommycash.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/pildid/tyhi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/tabeliStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/tabelid.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/vormid/ankeet.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/vormid/muusikaStyle.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tood/vormid/muusikaküsimustik.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,26 +15,85 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "Ossu-V"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Ossu-V&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ossu-V/veebirakendusedIKTpe25.git",
-    "accountId": "7b7bcf4a-be6c-4ef2-9c6b-5ab94bffa2cf"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ossu-V/veebirakendusedIKTpe25.git&quot;,
+    &quot;accountId&quot;: &quot;7b7bcf4a-be6c-4ef2-9c6b-5ab94bffa2cf&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.4599698961594259" />
+      <entry key="MS500" value="2.92220805336327" />
+      <entry key="S2" value="5.361525981110562" />
+      <entry key="S5" value="8.412679629428748" />
+      <entry key="S10" value="12.251609545204214" />
+      <entry key="S30" value="30.808073039110194" />
+      <entry key="S60" value="48.23380233427652" />
+      <entry key="M2" value="65.34190753175218" />
+      <entry key="M5" value="85.74860225220995" />
+      <entry key="M10" value="96.88521421055532" />
+      <entry key="M15" value="101.40102823047256" />
+      <entry key="M30" value="106.4154938477934" />
+      <entry key="H1" value="109.13162794027815" />
+      <entry key="H2" value="110.54613824218742" />
+      <entry key="H4" value="111.26806693885915" />
+      <entry key="D1" value="111.87730922338191" />
+      <entry key="W1" value="111.98245546148418" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="0.0" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="0.0" />
+      <entry key="M5" value="0.0" />
+      <entry key="M10" value="0.0" />
+      <entry key="M15" value="0.0" />
+      <entry key="M30" value="0.0" />
+      <entry key="H1" value="0.0" />
+      <entry key="H2" value="0.0" />
+      <entry key="H4" value="0.0" />
+      <entry key="D1" value="0.0" />
+      <entry key="W1" value="0.0" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="1.4006140277123322" />
+      <entry key="MS500" value="2.898419260455259" />
+      <entry key="S2" value="5.3454321676398795" />
+      <entry key="S5" value="8.400211235914487" />
+      <entry key="S10" value="12.242063814823023" />
+      <entry key="S30" value="30.800444629586988" />
+      <entry key="S60" value="48.22730503664998" />
+      <entry key="M2" value="65.33591367135541" />
+      <entry key="M5" value="85.7439498742993" />
+      <entry key="M10" value="96.88214005128215" />
+      <entry key="M15" value="101.3987658682842" />
+      <entry key="M30" value="106.41424168202914" />
+      <entry key="H1" value="109.13096856781728" />
+      <entry key="H2" value="110.54579982238573" />
+      <entry key="H4" value="111.26789549212094" />
+      <entry key="D1" value="111.8772803336189" />
+      <entry key="W1" value="111.9824513265924" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3KNE9uaKW7SfqLJXzAKEv6tSAae" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -90,6 +101,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -122,7 +134,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1791389478024</updated>
-      <workItem from="1791389479073" duration="312000" />
+      <workItem from="1791389479073" duration="645000" />
+      <workItem from="1791741137032" duration="801000" />
     </task>
     <servers />
   </component>
