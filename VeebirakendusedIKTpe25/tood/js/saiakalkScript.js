@@ -19,23 +19,31 @@ function saiaKalk(){
         vastus.innerHTML=
             "Sa valisid " + saiatyyp.value + '<br>'+
             "Valitud kogus on " + kogus.value + "tk" + '<br>' +
-            "Kokku hind on " +mooni*kogus.value + "€";
+            "Kokku hind on " + mooni*kogus.value + "€";
         vastus.style.color="blue";
         pilt.src="https://peetrikook.ee/storage/moonisai.png"
     }
     if(saiatyyp.selectedIndex===2){
-        vastus.innerHTML=juustu*kogus.value+"€";
+        vastus.innerHTML=
+            "Sa valisid " + saiatyyp.value + '<br>'+
+            "Valitud kogus on " + kogus.value + "tk" + '<br>' +
+            "Kokku hind on " + juustu*kogus.value + "€";
         vastus.style.color="blue";
         pilt.src="https://erlandia.ee/wp-content/uploads/2024/05/Juustusai.png"
     }
     if(saiatyyp.selectedIndex===3){
-        vastus.innerHTML=pontsik*kogus.value+"€";
+        vastus.innerHTML=
+            "Sa valisid " + saiatyyp.value + '<br>'+
+            "Valitud kogus on " + kogus.value + "tk" + '<br>' +
+            "Kokku hind on " + pontsik*kogus.value+"€";
         vastus.style.color="blue";
         pilt.src="https://martapagar.ee/wp-content/uploads/2020/04/pontsikud.jpg"
     }
     if(saiatyyp.selectedIndex===4){
         //toFixed ümardab(2) - ümardab 2 kohta peale koma
-        vastus.innerHTML=(kaneeli*kogus.value).toFixed(2)+"€";
+        vastus.innerHTML="Sa valisid " + saiatyyp.value + '<br>'+
+            "Valitud kogus on " + kogus.value + "tk" + '<br>' +
+            "Kokku hind on " + (kaneeli*kogus.value).toFixed(2)+"€";
         vastus.style.color="blue";
         pilt.src="https://cdn.barbora.ee/products/3750936f-e37c-4c7e-b51d-beb9e7b409f2_m.png"
     }
