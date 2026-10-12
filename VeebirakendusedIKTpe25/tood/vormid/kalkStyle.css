@@ -15,6 +15,18 @@ section#osa2{
     padding: 10pt;
     width: 40%;
 }
+section#osa3{
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 40%;
+}
+section#osa4{
+    border: 1pt solid black;
+    border-radius: 10pt;
+    padding: 10pt;
+    width: 40%;
+}
 img#pilt{
     border-radius: 50%;
     width: 100px;

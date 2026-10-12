@@ -5,6 +5,8 @@
     <title>Saia kalkulaator</title>
     <script src="../js/saiakalkScript.js"></script>
     <script src="../js/tempkalkScript.js"></script>
+    <script src="../js/valuutakalkScript.js"></script>
+    <script src="../js/vanusekalkScript.js"></script>
     <link rel="stylesheet" href="kalkStyle.css">
 </head>
 <body>
@@ -41,6 +43,47 @@
         <br>
         <div id="vastus2"></div>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfWVJKvd_KMVB5ySePVvS6HGvtX47TWV6ODXvyGo25lK7iwS7Xs5aDd8U&s=10" alt="" id="pilt2">
+    </section>
+    <section id="osa3">
+        <h2>Valuuta kalkulaator</h2>
+        <label for="valuuta">Kirjuta kuhu teisendame</label>
+        (dollar, juann, lyra, pound,)
+        <input type="text" id="valuuta" name="valuuta">
+        <br>
+        <label for="euro">Sisesta summa eurodes</label>
+        <input type="number" id="euro" min="1" max="10" step="1" onchange="valuutaKalk()">
+        <br>
+        <div id="vastus3"></div>
+    </section>
+    <!-- Näiteks:
+        protsendikalk,
+        kütusekalk(km ja liitrid -> sõidu hind)
+        vanusekalk (kasutaja sisestab sünniaasta -> vanus
+        oma idee saab ka kasutada
+        Kalk peab kasutama kas select võ radionupp ja
+        kuvada pilt vastavalt tehtud valikule
+    -->
+    <section id="osa4">
+        <h2>Vanuse kalkulaator</h2>
+        <label for="kuu">Vali enda sünnikuu</label>
+        <select name="kuu" id="kuu" onchange="vanuseKalk()">
+            <option value="vali">vali..</option>
+            <option value="jaanuar">jaanuar</option>
+            <option value="veebruar">veebruar</option>
+            <option value="märts">märts</option>
+            <option value="april">april</option>
+            <option value="mai">mai</option>
+            <option value="juuni">juuni</option>
+            <option value="juuli">juuli</option>
+            <option value="august">august</option>
+            <option value="september">september</option>
+            <option value="oktoober">oktoober</option>
+            <option value="november">november</option>
+            <option value="detsember">detsember</option>
+        </select>
+        <br>
+
+        <div id="vastus4"></div>
     </section>
 </section>
 </body>
