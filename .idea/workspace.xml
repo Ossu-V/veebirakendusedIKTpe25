@@ -5,12 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/kpjakellaajaKuvamine.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/kuupaevaFunktsioonid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/kuupaevaKontroll.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/vormid/kalk.html" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/vormid/kalk.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +33,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Ossu-V/veebirakendusedIKTpe25.git",
-    "accountId": "be5a52d4-359d-4b26-ae64-f016e0768e65"
+    "accountId": "a7c9e2fd-db0b-4f55-9025-2f7f6b952076"
   }
 }]]></component>
   <component name="McpProjectServerCommands">
@@ -107,7 +102,8 @@
       <workItem from="1791798386718" duration="7000" />
       <workItem from="1792042325743" duration="5071000" />
       <workItem from="1792387540501" duration="929000" />
-      <workItem from="1792394664530" duration="3943000" />
+      <workItem from="1792394664530" duration="4505000" />
+      <workItem from="1792401538517" duration="162000" />
     </task>
     <servers />
   </component>
