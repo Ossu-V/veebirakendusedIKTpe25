@@ -114,3 +114,24 @@ autod.sort((a, b) => a.aasta - b.aasta);
 console.log(autod);
 */
 
+//1. Loodud objekt raamat
+let raamat = { pealkiri: "Tõde ja õigus I", autor: "A. H. Tammsaare", aasta: 1926,
+
+    //2. Meetod, mis kuvab raamatu kirjelduse
+    kuvaKirjeldus: function() {
+        console.log("Raamat: " + this.pealkiri + ", Autor: " + this.autor + ", Aasta: " + this.aasta);
+    },
+
+    //3. Meetod, mis muudab väljaandmise aasta
+    muudaAastat: function(uusAasta) {
+        this.aasta = uusAasta;
+    }
+};
+
+//2. Kuvab raamatu kirjelduse
+raamat.kuvaKirjeldus();
+//3. Muudab väljandamise aasta
+raamat.muudaAastat(1930);
+
+//3. Prindib tulemuse konsooli
+console.log(raamat);
