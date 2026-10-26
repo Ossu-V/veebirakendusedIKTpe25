@@ -112,7 +112,6 @@ console.log(filter);
 
 autod.sort((a, b) => a.aasta - b.aasta);
 console.log(autod);
-*/
 
 //1. Loodud objekt raamat
 let raamat = { pealkiri: "Tõde ja õigus I", autor: "A. H. Tammsaare", aasta: 1926,
@@ -135,3 +134,65 @@ raamat.muudaAastat(1930);
 
 //3. Prindib tulemuse konsooli
 console.log(raamat);
+ */
+
+let raamatukogu = {
+    //1. Objekt raamatukogu
+    raamatud: [
+        { pealkiri: "Kevade", autor: "Oskar Luts", aasta: 1912 },
+        { pealkiri: "Harry Potter ja tarkade kivi", autor: "J.K. Rowling", aasta: 1997 },
+        { pealkiri: "Tõde ja õigus I", autor: "A. H. Tammsaare", aasta: 1926 },
+        { pealkiri: "Serafima ja Bogdan", autor: "Vahur Afanasjev", aasta: 2017 }
+    ],
+
+    //2. Raamatu kuvamise meetod
+    kuvaRaamatud: function() {
+        console.log("Raamatukogu nimekiri");
+        for (let r of this.raamatud) {
+            console.log(r.pealkiri + " - " + r.autor + " (" + r.aasta + ")");
+        }
+    },
+
+    //3. Raamatu lisamise meetod
+    lisaRaamat: function(uusPealkiri, uusAutor, uusAasta) {
+        let uusRaamat = { pealkiri: uusPealkiri, autor: uusAutor, aasta: uusAasta };
+        this.raamatud.push(uusRaamat);
+        console.log("Lisatud uus raamat: " + uusPealkiri);
+    },
+
+    //4. Meetod, mis kuvab raamatute koguarvu
+    kuvaKoguarv: function() {
+        console.log("Raamatute koguarv raamatukogus: " + this.raamatud.length);
+    },
+
+    //5. Meetod, mis arvutab mitu raamatud on ilmunud pärast 2000. aastat
+    loendaUuedRaamatud: function() {
+        let loendur = 0;
+
+        for (let r of this.raamatud) {
+            if (r.aasta > 2000) {
+                loendur = loendur + 1; // või loendur++;
+            }
+        }
+
+        console.log("Pärast 2000. aastat ilmunud raamatuid: " + loendur);
+    },
+
+    //6. Oma meetod, tühjendab raamatukogu
+    tuhjendaRaamatukogu: function() {
+        this.raamatud = [];
+        console.log("Raamatukogu on nüüd täiesti tühi!");
+    }
+};
+
+//2. Kuvab raamatud
+raamatukogu.kuvaRaamatud();
+//3. Lisab raamatud
+raamatukogu.lisaRaamat("Mees, kes teadis ussisõnu", "Andrus Kivirähk", 2007 );
+//4. Kuvab raamatute koguarvu
+raamatukogu.kuvaKoguarv();
+//5. Loendab raamatud kokku mis on ilmunud pärast 2000. aastat
+raamatukogu.loendaUuedRaamatud();
+//6. Tühjendab raamatukogu
+raamatukogu.tuhjendaRaamatukogu();
+raamatukogu.kuvaKoguarv();
