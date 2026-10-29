@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tehtud.html" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tehtud.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/nooleFunktsioonid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/vormid/nooleFunktsioonid.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +18,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -33,7 +35,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Ossu-V/veebirakendusedIKTpe25.git",
-    "accountId": "49ddbdcd-874a-4fa8-a03c-12283248dbb9"
+    "accountId": "40aaed59-b187-4572-911e-948f07d058af"
   }
 }]]></component>
   <component name="McpProjectServerCommands">
@@ -107,7 +109,11 @@
       <workItem from="1792387540501" duration="929000" />
       <workItem from="1792394664530" duration="4505000" />
       <workItem from="1792401538517" duration="162000" />
-      <workItem from="1792996024490" duration="6326000" />
+      <workItem from="1792996024490" duration="7634000" />
+      <workItem from="1793017572633" duration="68000" />
+      <workItem from="1793021567419" duration="81000" />
+      <workItem from="1793024501151" duration="18000" />
+      <workItem from="1793255216645" duration="2983000" />
     </task>
     <servers />
   </component>
