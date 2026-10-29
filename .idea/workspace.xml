@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="" />
+    <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/nooleFunktsioonid.js" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/nooleFunktsioonid.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -109,7 +112,7 @@
       <workItem from="1793017572633" duration="68000" />
       <workItem from="1793021567419" duration="81000" />
       <workItem from="1793024501151" duration="18000" />
-      <workItem from="1793255216645" duration="3302000" />
+      <workItem from="1793255216645" duration="4020000" />
     </task>
     <servers />
   </component>

@@ -86,5 +86,40 @@ arvud.forEach(nr => {
     const paaris = nr % 2 === 0 ? "paaris" : "paaritu";
     console.log(`${nr} is ${paaris}`);
 });
-*/
 
+let nimed = ["Kati", "Marta", "Andres", "Jüri", "Liisa"];
+
+nimed.forEach(function(nimi) {
+    console.log(`<li>${nimi}</li>`);
+});
+
+let nimed = ["Kati", "Marta", "Andres", "Jüri", "Liisa"];
+
+const kasutaja = function(nimi) {
+    console.log(`<li>${nimi}</li>`);
+};
+
+nimed.forEach(kasutaja);
+
+let nimed = ["Kati", "Marta", "Andres", "Jüri", "Liisa"];
+
+//pikalt
+const kasutaja = nimi => console.log(`<li>${nimi}</li>`);
+nimed.forEach(kasutaja);
+
+//lühidalt
+nimed.forEach(nimi => console.log(`<li>${nimi}</li>`));
+
+const teostaAJAXPäring = (url, callback) => {
+    setTimeout(() => {
+        const vastus = "Vastus andmebaasist";
+        callback(vastus);
+    }, 2000);
+};
+
+const callbackFunktsioon = (vastus) => {
+    console.log("Vastus saadud:", vastus);
+};
+
+teostaAJAXPäring("https://api.example.com/data", callbackFunktsioon);
+*/
