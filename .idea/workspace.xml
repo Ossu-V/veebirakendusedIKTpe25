@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/nooleFunktsioonid.js" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/js/nooleFunktsioonid.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Ossu-V/veebirakendusedIKTpe25.git",
-    "accountId": "40aaed59-b187-4572-911e-948f07d058af"
+    "accountId": "2aeff3b9-3f93-47b7-832c-28b1165d6a70"
   }
 }]]></component>
   <component name="McpProjectServerCommands">
@@ -112,7 +111,9 @@
       <workItem from="1793017572633" duration="68000" />
       <workItem from="1793021567419" duration="81000" />
       <workItem from="1793024501151" duration="18000" />
-      <workItem from="1793255216645" duration="4020000" />
+      <workItem from="1793255216645" duration="5368000" />
+      <workItem from="1793616678358" duration="663000" />
+      <workItem from="1793617354664" duration="105000" />
     </task>
     <servers />
   </component>
