@@ -6,6 +6,26 @@
     <title>Oscar veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="style.css">
     <script src="tood/js/kpjakellaajaKuvamine.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            //paremale nuppu vajutamine
+            $('#paremale').click(function () {
+                $('#osa1').animate({left: '200px'}, 1000);
+                $(this).hide();
+                $('#vasakule').show();
+            });
+            //vasakule nuppu vajutamine
+            $('#vasakule').click(function () {
+                $('#osa1').animate({left: '0px'}, 1000);
+                $(this).hide();
+                $('#paremale').show();
+            });
+        })
+    </script>
 </head>
 <body>
 <!--veebilehe sisu, mis kasutaja näeb-->
@@ -43,6 +63,8 @@
             käsitsi kirjutatud leht</p>
         <p>Palun kasuta navigeerimismenüüd, et leida info!</p>
     </section>
+    <input type="button" value="vasakule" id="vasakule">
+    <input type="button" value="paremale" id="paremale">
 
     <section id="osa2">
         <h2>Päevapilt</h2>
