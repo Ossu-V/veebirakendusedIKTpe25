@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/canvas/joonisScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/canvas/joonisScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/canvas/joonistamine.html" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/canvas/joonistamine.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +30,12 @@
     &quot;assignee&quot;: &quot;Ossu-V&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Ossu-V/veebirakendusedIKTpe25.git",
-    "accountId": "bc954e5b-a84d-4c97-ab03-0d5c1ee883fd"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Ossu-V/veebirakendusedIKTpe25.git&quot;,
+    &quot;accountId&quot;: &quot;bc954e5b-a84d-4c97-ab03-0d5c1ee883fd&quot;
   }
-}]]></component>
+}</component>
   <component name="McpProjectServerCommands">
     <commands />
     <urls />
@@ -119,7 +117,8 @@
       <workItem from="1794221094163" duration="5259000" />
       <workItem from="1794226866857" duration="89000" />
       <workItem from="1794227003325" duration="18000" />
-      <workItem from="1794298053418" duration="4382000" />
+      <workItem from="1794298053418" duration="5530000" />
+      <workItem from="1794825586091" duration="39000" />
     </task>
     <servers />
   </component>
