@@ -5,10 +5,59 @@
     <title>Muusika küsimustik</title>
     <script src="../js/muusikaküsimustikScript.js"></script>
     <link rel="stylesheet" href="muusikaStyle.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <script>
+        $(function(){
+            // peidame vead
+            $('.viga').hide();
+
+            // puhastusnupp
+            $('#puhasta').click(function(){
+                $('#muusikaVorm')[0].reset();
+                $('.viga').hide();
+            });
+
+            // valideerimine, kui vorm on saadetud
+            $('#muusikaVorm').submit(function(event){
+                let valid = true;
+                $('.viga').css('color', 'red');
+
+                // 1. Checkbox
+                if($('input[name="muusika"]:checked').length === 0){
+                    $('#viga1').show();
+                    valid = false;
+                } else { $('#viga1').hide(); }
+
+                // 4. Radio
+                if($('input[name="jahei"]:checked').length === 0){
+                    $('#viga4').show();
+                    valid = false;
+                } else { $('#viga4').hide(); }
+
+                // 5. Text (ainult tähed)
+                let tekst = $('#arvamus').val().trim();
+                if(tekst === "" || !/^[a-zA-Z\s]+$/.test(tekst)){
+                    $('#viga5').show();
+                    valid = false;
+                } else { $('#viga5').hide(); }
+
+                // kui on vead, siis ei ole vaja vormi saada
+                if(!valid){
+                    event.preventDefault();
+                } else {
+                    alert("Vorm on edukalt saadetud!");
+                }
+            });
+        });
+    </script>
+
 </head>
 <body>
 <h1>Muusika küsimustik</h1>
-<form action="#">
+<form action="#" id="muusikaVorm">
     <table border="1">
         <tr>
             <td>
@@ -19,6 +68,7 @@
             </td>
             <td>
                 <div id="vastus1"></div>
+                <span class="viga" id="viga5">Palun kirjuta tähtedega arvamus</span>
             </td>
         </tr>
         <tr>
@@ -35,7 +85,7 @@
             <td>
                 <div id="vastus2"></div>
                 <img src="#" id="pilt" alt="Tulemuse pilt">
-
+                <span class="viga" id="viga4">Palun tee valik</span>
             </td>
         </tr>
         <tr>
@@ -64,6 +114,7 @@
             </td>
             <td>
                 <div id="vastus3"></div>
+                <span class="viga" id="viga1">Palun vali vähemalt üks muusika stiil</span>
             </td>
         </tr>
         <tr>
@@ -106,10 +157,10 @@
         </tr>
         <tr>
             <td>
-                <input type="reset" value="Puhasta" onclick="puhasta()">
+                <input type="reset" value="Puhasta" id="puhasta" onclick="puhasta()">
             </td>
             <td>
-                <input type="button" value="Näita andmed" onclick="tervitus()">
+                <input type="submit" value="Näita andmed" onclick="tervitus()">
             </td>
             <td>
                 <div id="vastus6"></div>

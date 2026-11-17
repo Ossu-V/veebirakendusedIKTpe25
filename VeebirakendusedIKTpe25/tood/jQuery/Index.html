@@ -37,6 +37,12 @@
         $('#koordinaadid').html('x:' + koht.left + '|| y:' + koht.top);
     }
 
+    $(document).ready(function () {
+      $('#FadeToggle').click(function(){
+        $('#tekstikast').fadeToggle();
+      });
+    })
+
     function leheStart(){
       $('#tekstikast').mouseenter(tekstPunaseks);
       $('#tekstikast').mouseleave(tekstMustaks);
@@ -72,6 +78,7 @@
            onclick="$('#tekstikast').hide(2000)">
     <input type="button" value="kuva teksti"
            onclick="$('#tekstikast').show(2000, alert('Kohe kuvab tekt'))">
+    <input type="button" value="Fade toggle" id="FadeToggle">
 
   </section>
   <div id="koordinaadid"></div>

@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/jQuery/Index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/jQuery/queryStyle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/jQuery/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/jQuery/Index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/vormid/muusikaStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/vormid/muusikaStyle.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/vormid/muusikaküsimustik.html" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tood/vormid/muusikaküsimustik.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Ossu-V/veebirakendusedIKTpe25.git",
-    "accountId": "0705ca64-5f92-465c-b82e-18f8bb6daa7a"
+    "accountId": "67e8f3fa-2f05-48e7-a70d-de3e64322a8a"
   }
 }]]></component>
   <component name="McpProjectServerCommands">
@@ -122,7 +123,9 @@
       <workItem from="1794226866857" duration="89000" />
       <workItem from="1794227003325" duration="18000" />
       <workItem from="1794298053418" duration="5530000" />
-      <workItem from="1794825586091" duration="5405000" />
+      <workItem from="1794825586091" duration="5472000" />
+      <workItem from="1794832259469" duration="133000" />
+      <workItem from="1794903093060" duration="5357000" />
     </task>
     <servers />
   </component>

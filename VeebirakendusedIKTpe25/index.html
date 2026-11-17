@@ -9,6 +9,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+            integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
+            crossorigin="anonymous"></script>
 
     <script>
         $(document).ready(function () {
@@ -24,10 +27,35 @@
                 $(this).hide();
                 $('#paremale').show();
             });
+
+            //värvib teksti punaseks
+            function tekstPunaseks(){
+                $('#osa1').css('color','red');
+            }
+            function tekstMustaks(){
+                $('#osa1').css('color','black');
+            }
+            function koordLugemine(event, ui){
+                let  koht=ui.offset;
+                $('#koordinaadid').html('x:' + koht.left + '|| y:' + koht.top);
+            }
+
+            $(document).ready(function () {
+                $('#FadeToggle').click(function(){
+                    $('#osa1').fadeToggle();
+                });
+            })
+
+            function leheStart(){
+                $('#osa1').mouseenter(tekstPunaseks);
+                $('#osa1').mouseleave(tekstMustaks);
+                $('#osa1').draggable();
+                $('#osa1').bind("drag", koordLugemine);
+            }
         })
     </script>
 </head>
-<body>
+<body onload="leheStart()">
 <!--veebilehe sisu, mis kasutaja näeb-->
 <!--päis-->
 <header>
@@ -65,6 +93,34 @@
     </section>
     <input type="button" value="vasakule" id="vasakule">
     <input type="button" value="paremale" id="paremale">
+    <input type="button" value="peida teksti"
+           onclick="$('#osa1').hide(2000)">
+    <input type="button" value="kuva teksti"
+           onclick="$('#osa1').show(2000, alert('Kohe kuvab tekt'))">
+    <input type="button" value="Fade toggle" id="FadeToggle">
+
+    <section>
+        <div id="koordinaadid"></div>
+    </section>
+
+    <section id="Juhend">
+        <div>
+            <h2>Juhend</h2>
+            1. Kui vajutada nuppu "Vasakule" või "Paremale" liigub kast kas vasakule või paremale.
+            <br>
+            2. Kui vajutada nuppu "Peida tekst", siis läheb kast kokku ja peidab teskti ära.
+            <br>
+            3. Kui vajutada nuppu "Kuva tekst", siis tuleb teavitus, et "Kohe kuvab tekst" ja siis kuvatakse tekst.
+            <br>
+            4. Kui hiirega minna teksti kasti peale, siis tekst muutub punaseks ja kui hiir ära võtta, siis mustaks tagasi.
+            <br>
+            5. Kui hiirega minna teksti kasti peale ja hoida LMB/vasakut hiire nuppu peal, siis saab kasti liigutada kuhu iganes ekraanil (Vasakule/Premale nuppud ikka töötavad)
+            <br>
+            6. Nuppude all on 2 pilti, mõlemat pilti saab sama moodi liigutada kui teksti kasti.
+            <br>
+            7. Kui vajutada nuppu "Fade toggle", siis see töötab sarnaselt "Peida tekst" functioonile ja hajutab kas teksti välja või sisse.
+        </div>
+    </section>
 
     <section id="osa2">
         <h2>Päevapilt</h2>
