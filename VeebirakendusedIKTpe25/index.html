@@ -21,6 +21,7 @@
                 $(this).hide();
                 $('#vasakule').show();
             });
+
             //vasakule nuppu vajutamine
             $('#vasakule').click(function () {
                 $('#osa1').animate({left: '0px'}, 1000);
@@ -28,31 +29,33 @@
                 $('#paremale').show();
             });
 
-            //värvib teksti punaseks
-            function tekstPunaseks(){
-                $('#osa1').css('color','red');
-            }
-            function tekstMustaks(){
-                $('#osa1').css('color','black');
-            }
-            function koordLugemine(event, ui){
-                let  koht=ui.offset;
-                $('#koordinaadid').html('x:' + koht.left + '|| y:' + koht.top);
-            }
+            //fade toggle nupp
+            $('#FadeToggle').click(function () {
+                $('#osa1').fadeToggle();
+            });
+        });
 
-            $(document).ready(function () {
-                $('#FadeToggle').click(function(){
-                    $('#osa1').fadeToggle();
-                });
-            })
+        //värvib teksti punaseks
+        function tekstPunaseks() {
+            $('#osa1').css('color', 'red');
+        }
 
-            function leheStart(){
-                $('#osa1').mouseenter(tekstPunaseks);
-                $('#osa1').mouseleave(tekstMustaks);
-                $('#osa1').draggable();
-                $('#osa1').bind("drag", koordLugemine);
-            }
-        })
+        //värvib teksti mustaks
+        function tekstMustaks() {
+            $('#osa1').css('color', 'black');
+        }
+
+        function koordLugemine(event, ui) {
+            let koht = ui.offset;
+            $('#koordinaadid').html('x:' + koht.left + '|| y:' + koht.top);
+        }
+
+        function leheStart() {
+            $('#osa1').mouseenter(tekstPunaseks);
+            $('#osa1').mouseleave(tekstMustaks);
+            $('#osa1').draggable();
+            $('#osa1').on("drag", koordLugemine);
+        }
     </script>
 </head>
 <body onload="leheStart()">

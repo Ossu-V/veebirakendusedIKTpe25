@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Muusika küsimustik</title>
-    <script src="../js/muusikaküsimustikScript.js"></script>
     <link rel="stylesheet" href="muusikaStyle.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
             crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"
+            integrity="sha256-mblSWfbYzaq/f+4akyMhE6XELCou4jbkgPv+JQPER2M="
+            crossorigin="anonymous"></script>
+    <script src="../js/muusikaküsimustikScript.js"></script>
 
     <script>
         $(function(){
@@ -15,49 +18,68 @@
             $('.viga').hide();
 
             // puhastusnupp
-            $('#puhasta').click(function(){
-                $('#muusikaVorm')[0].reset();
+            $('#puhastaNupp').click(function(){
+                puhastaVorm();
                 $('.viga').hide();
             });
 
-            // valideerimine, kui vorm on saadetud
-            $('#muusikaVorm').submit(function(event){
+            // vormi kontrollimine
+            $('#naitaNupp').click(function(){
                 let valid = true;
                 $('.viga').css('color', 'red');
 
-                // 1. Checkbox
-                if($('input[name="muusika"]:checked').length === 0){
-                    $('#viga1').show();
+                // tekstiväli
+                let tekst = $('#arvamus').val().trim();
+                if(tekst === "" || !/^[a-zA-ZäöüõÄÖÜÕ\s]+$/.test(tekst)){
+                    $('#viga5').show();
                     valid = false;
-                } else { $('#viga1').hide(); }
+                } else {
+                    $('#viga5').hide();
+                }
 
-                // 4. Radio
+                // raadio-nupud
                 if($('input[name="jahei"]:checked').length === 0){
                     $('#viga4').show();
                     valid = false;
-                } else { $('#viga4').hide(); }
-
-                // 5. Text (ainult tähed)
-                let tekst = $('#arvamus').val().trim();
-                if(tekst === "" || !/^[a-zA-Z\s]+$/.test(tekst)){
-                    $('#viga5').show();
-                    valid = false;
-                } else { $('#viga5').hide(); }
-
-                // kui on vead, siis ei ole vaja vormi saada
-                if(!valid){
-                    event.preventDefault();
                 } else {
-                    alert("Vorm on edukalt saadetud!");
+                    $('#viga4').hide();
+                }
+
+                // muusika stiilid
+                if($('input[name="muusika"]:checked').length === 0){
+                    $('#viga1').show();
+                    valid = false;
+                } else {
+                    $('#viga1').hide();
+                }
+
+                // kuulamistunnid
+                if($('#kuulamine').val() == "0"){
+                    $('#viga2').show();
+                    valid = false;
+                } else {
+                    $('#viga2').hide();
+                }
+
+                // muusikud
+                if($('input[name="muusikud"]:checked').length === 0){
+                    $('#viga3').show();
+                    valid = false;
+                } else {
+                    $('#viga3').hide();
+                }
+
+                // kui vigu pole, näitame vastuseid
+                if(valid){
+                    tervitus();
                 }
             });
         });
     </script>
-
 </head>
 <body>
 <h1>Muusika küsimustik</h1>
-<form action="#" id="muusikaVorm">
+<form id="muusikaVorm">
     <table border="1">
         <tr>
             <td>
@@ -84,7 +106,7 @@
             </td>
             <td>
                 <div id="vastus2"></div>
-                <img src="#" id="pilt" alt="Tulemuse pilt">
+                <img src="../pildid/tyhi.png" id="pilt" alt="Tulemuse pilt">
                 <span class="viga" id="viga4">Palun tee valik</span>
             </td>
         </tr>
@@ -122,10 +144,11 @@
                 <label for="kuulamine">Mitu tundi päevas sa kuulad muusikat?</label>
             </td>
             <td>
-                <input type="range" id="kuulamine" min="0" max="24" onchange="rangeValik()">
+                <input type="range" id="kuulamine" min="0" max="24" value="0" onchange="rangeValik()">
             </td>
             <td>
                 <div id="vastus4"></div>
+                <span class="viga" id="viga2">Palun vali tundide arv</span>
             </td>
         </tr>
         <tr>
@@ -151,16 +174,16 @@
             </td>
             <td>
                 <div id="vastus5"></div>
-                <!-- Muuda see rida selliseks: -->
-                <img src="#" id="pilt2" width="200" alt="Teise tulemuse pilt">
+                <img src="../pildid/tyhi.png" id="pilt2" width="200" alt="Teise tulemuse pilt">
+                <span class="viga" id="viga3">Palun vali vähemalt üks muusik</span>
             </td>
         </tr>
         <tr>
             <td>
-                <input type="reset" value="Puhasta" id="puhasta" onclick="puhasta()">
+                <input type="button" value="Puhasta" id="puhastaNupp">
             </td>
             <td>
-                <input type="submit" value="Näita andmed" onclick="tervitus()">
+                <input type="button" value="Näita andmed" id="naitaNupp">
             </td>
             <td>
                 <div id="vastus6"></div>

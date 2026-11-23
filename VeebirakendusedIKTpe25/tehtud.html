@@ -5,6 +5,68 @@
     <meta charset="UTF-8">
     <title>Oscar veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+
+    <style type="text/css">
+        .li_kujundus{
+            background-repeat:no-repeat;
+            background-position:left;
+            padding-left:10px;
+            display:inline;
+        }
+        .ul_kujundus{
+            list-style:none;
+            margin:0;
+            padding:0;
+            display:inline;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function(){
+            $('ul').addClass('ul_kujundus');
+            $('ul li ul li').addClass('li_kujundus');
+        });
+    </script>
+
+    <style type="text/css">
+        ul {
+            width: 200px;
+        }
+        ul li ul {
+            list-style-type:none;
+            width: 200px;
+        }
+        a {
+            display:block;
+            border-bottom: 1px solid #fff;
+            text-decoration: none;
+            background: #099;
+            color: #fff;
+            padding: 0.3em;
+        }
+        li {
+            display:inline;
+        }
+        .hover {
+            background: #3C9;
+            font-weight: 700;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(function(){
+            $('a').hover(function(event){
+                    $(this).addClass('hover');
+                },
+                function(){
+                    $(this).removeClass('hover');
+                });
+        });
+    </script>
 </head>
 <body>
 <!--veebilehe sisu, mis kasutaja näeb-->
@@ -25,6 +87,11 @@
         </li>
         <li>
             <a href="tehtud.html">Tehtud tööd</a>
+            <ul>
+                <li><a href="http://minuveebileht6.wordpress.com">WordPress</a></li>
+                <li><a href="kujundus2/index.html">Leht teise kujundusega</a></li>
+                <li><a href="tood/tabelid.html">Tabelid 3</a></li>
+            </ul>
         </li>
         <li>
             <a href="lingid.html">Kasulikud lingid</a>
@@ -56,6 +123,8 @@
             <a href="tood/vormid/objektideKontroll.html">Js objektid</a>
             <br>
             <a href="tood/canvas/joonistamine.html">Joonistamine Canvaga</a>
+            <br>
+            <a href="tood/jQuery/Index.html">jQuery</a>
         </div>
     </section>
     <section>
