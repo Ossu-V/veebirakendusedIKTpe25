@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0af13faa-6d31-4646-a08b-bceed9029c15" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tehtud.html" beforeDir="false" afterPath="$PROJECT_DIR$/VeebirakendusedIKTpe25/tehtud.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +33,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Ossu-V/veebirakendusedIKTpe25.git",
-    "accountId": "888ea3ad-ba8b-4c93-acf9-cf0ac76661a6"
+    "accountId": "0c58073a-3a6f-42a9-a220-905c60ffe691"
   }
 }]]></component>
   <component name="McpProjectServerCommands">
@@ -122,7 +121,8 @@
       <workItem from="1794825586091" duration="5472000" />
       <workItem from="1794832259469" duration="133000" />
       <workItem from="1794903093060" duration="5658000" />
-      <workItem from="1795430286702" duration="5661000" />
+      <workItem from="1795430286702" duration="5935000" />
+      <workItem from="1795437505769" duration="65000" />
     </task>
     <servers />
   </component>
