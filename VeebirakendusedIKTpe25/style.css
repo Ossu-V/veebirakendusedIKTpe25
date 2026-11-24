@@ -110,16 +110,16 @@ nav ul li a:hover{
 
 nav ul li ul {
     list-style-type:none;
-    margin-top: 5px;
+    margin: 0;
+    padding: 0;
 }
 nav ul li ul li {
-    float: left;
-    margin-right: 5px;
+    float: none;
 }
 nav ul li ul li a {
-    background-color: lightgray;
-    border-bottom: 2px solid crimson;
-    border-radius: 20%;
+    border-radius: 0;
+    border-bottom: 1px solid crimson;
+    text-align: left;
 }
 a {
     display:block;
@@ -173,4 +173,6 @@ section#Sidumine{
     border-left: 3px solid crimson;
     border-right: 3px solid crimson;
     border-radius: 20%;
+    white-space: nowrap;
+    pointer-events: none;
 }
