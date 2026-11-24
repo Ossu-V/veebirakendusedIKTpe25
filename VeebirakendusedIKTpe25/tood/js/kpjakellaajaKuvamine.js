@@ -2,10 +2,10 @@ function tanaOn() {
     const now = new Date();
 
     const paev = now.getDate(); //tagastab kuupäeva päeva
-    const kuu = now.getMonth(); //tagastab kuu numbri (0-11)
+    const kuu = now.getMonth() + 1; //tagastab kuu numbri (0-11)
     const aasta = now.getFullYear(); //tagastab aasta
     const tunnid = now.getHours(); //tunnid
-    const minutid = now.getMinutes(); //minutid
+    const minutid = now.getMinutes().toString().padStart(2, '0'); //minutid
 
     let vastus = document.getElementById("vastus");
 
@@ -22,5 +22,5 @@ function synnipaevani(){
 
     let vastus2=document.getElementById("vastus2");
 
-    vastus2.innerHTML="Minu sünnipäevani "+ paevad.toFixed(0) + "päeva";
+    vastus2.innerHTML="Minu sünnipäevani "+ paevad.toFixed(0) + " päeva";
 }
